@@ -1,0 +1,24 @@
+{
+  "name": "storybook-framework",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "node ./scripts/watch-tsc.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "app/*",
+    "examples/*"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^3.0.0",
+    "shelljs": "^0.8.3"
+  }
+}

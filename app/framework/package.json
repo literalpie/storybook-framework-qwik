@@ -1,0 +1,58 @@
+{
+  "name": "@storybook/framework",
+  "version": "0.0.1",
+  "description": "Storybook for framework: View framework components in isolation with hot reloading.",
+  "keywords": [
+    "storybook",
+    "framework"
+  ],
+  "homepage": "https://github.com/storybookjs/framework/app/framework",
+  "bugs": {
+    "url": "https://github.com/storybookjs/framework/issues"
+  },
+  "repository": {
+    "type": "git",
+    "directory": "app/framework"
+  },
+  "license": "MIT",
+  "files": [
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "main": "dist/client/index.js",
+  "typings": "dist/client/index.d.ts",
+  "bin": {
+    "build-storybook": "./bin/build.js",
+    "start-storybook": "./bin/index.js",
+    "storybook-server": "./bin/index.js"
+  },
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "dependencies": {
+    "@storybook/addons": "6.0.0-alpha.2",
+    "@storybook/core": "6.0.0-alpha.2",
+    "@storybook/client-api": "6.0.0-alpha.2",
+    "@types/webpack-env": "^1.15.0",
+    "@storybook/core-events": "6.0.0-alpha.2",
+    "@storybook/source-loader": "6.0.0-alpha.2",
+    "@types/webpack": "^4.41.3",
+    "typescript": "^3.7.5",
+    "core-js": "^3.0.1",
+    "global": "^4.3.2",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "regenerator-runtime": "^0.13.3",
+    "ts-dedent": "^1.1.0"
+  },
+  "peerDependencies": {
+    "babel-loader": "^7.0.0 || ^8.0.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
