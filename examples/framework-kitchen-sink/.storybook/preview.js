@@ -1,9 +1,5 @@
-import { addParameters, addDecorator } from '@storybook/client-api';
-import { withA11y } from '@storybook/addon-a11y';
-
-addDecorator(withA11y);
-
-addParameters({
+export const decorators = [];
+export const parameters = {
   a11y: {
     config: {},
     options: {
@@ -17,4 +13,4 @@ addParameters({
   docs: {
     iframeHeight: '200px',
   },
-});
+};
