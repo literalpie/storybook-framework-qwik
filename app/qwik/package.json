@@ -1,10 +1,10 @@
 {
-  "name": "@storybook/framework",
+  "name": "storybook-framework-qwik",
   "version": "0.0.1",
-  "description": "Storybook for framework: View framework components in isolation with hot reloading.",
+  "description": "Storybook for Qwik: View Qwik components in isolation.",
   "keywords": [
     "storybook",
-    "framework"
+    "qwik"
   ],
   "exports": {
     ".": {
@@ -23,13 +23,13 @@
       "types": "./package.json"
     }
   },
-  "homepage": "https://github.com/storybookjs/framework/app/framework",
+  "homepage": "TODO",
   "bugs": {
-    "url": "https://github.com/storybookjs/framework/issues"
+    "//": "TODO"
   },
   "repository": {
     "type": "git",
-    "directory": "app/framework"
+    "directory": "app/qwik"
   },
   "license": "MIT",
   "files": [
