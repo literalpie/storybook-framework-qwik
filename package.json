@@ -8,7 +8,6 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "node ./scripts/watch-tsc.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "workspaces": [
@@ -20,5 +19,9 @@
   "devDependencies": {
     "chalk": "^3.0.0",
     "shelljs": "^0.8.3"
+  },
+  "dependencies": {
+    "@builder.io/qwik": "^0.15.2",
+    "@builder.io/qwik-city": "^0.0.128"
   }
 }

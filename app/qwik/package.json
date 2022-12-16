@@ -6,22 +6,30 @@
     "storybook",
     "qwik"
   ],
+  "type": "module",
+  "//": "not sure why dist/preview is needed, but it is",
   "exports": {
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./preset": {
       "require": "./dist/preset.js",
-      "import": "./dist/preset.mjs",
+      "import": "./dist/preset.js",
       "types": "./dist/preset.d.ts"
     },
-    "./package.json": {
-      "require": "./package.json",
-      "import": "./package.json",
-      "types": "./package.json"
-    }
+    "./dist/preview.js": {
+      "require": "./dist/preview.js",
+      "import": "./dist/preview.js",
+      "types": "./dist/preview.d.ts"
+    },
+    "./preview.js": {
+      "require": "./dist/preview.js",
+      "import": "./dist/preview.js",
+      "types": "./dist/preview.d.ts"
+    },
+    "./package.json": "./package.json"
   },
   "homepage": "TODO",
   "bugs": {
@@ -34,16 +42,20 @@
   "license": "MIT",
   "files": [
     "README.md",
+    "./dist/*.js",
     "*.js",
     "*.d.ts"
   ],
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepare": "node ../../scripts/prepare.js"
+    "watch": "tsc --watch --outDir ./dist --listEmittedFiles",
+    "build": "tsc --outDir ./dist --listEmittedFiles"
   },
   "dependencies": {
+    "@builder.io/qwik": "^0.15.2",
+    "@builder.io/qwik-city": "^0.0.128",
     "@storybook/addons": "7.0.0-beta.9",
     "@storybook/builder-vite": "7.0.0-beta.9",
     "@storybook/channel-postmessage": "7.0.0-beta.9",

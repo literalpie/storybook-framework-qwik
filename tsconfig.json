@@ -18,6 +18,8 @@
   },
   "exclude": [
     "**/dist",
+    "./examples/qwik-kitchen-sink",
+    "./examples",
     "node_modules",
     "**/node_modules",
     "**/*.spec.ts",
