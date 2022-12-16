@@ -6,20 +6,27 @@
     "storybook",
     "qwik"
   ],
+  "type": "module",
+  "//": "not sure why dist/preview is needed, but it is",
   "exports": {
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./preset": {
       "require": "./dist/preset.js",
-      "import": "./dist/preset.mjs",
+      "import": "./dist/preset.js",
       "types": "./dist/preset.d.ts"
+    },
+    "./dist/preview.js": {
+      "require": "./dist/preview.js",
+      "import": "./dist/preview.js",
+      "types": "./dist/preview.d.ts"
     },
     "./preview.js": {
       "require": "./dist/preview.js",
-      "import": "./dist/preview.mjs",
+      "import": "./dist/preview.js",
       "types": "./dist/preview.d.ts"
     },
     "./package.json": "./package.json"
@@ -36,7 +43,6 @@
   "files": [
     "README.md",
     "./dist/*.js",
-    "./dist/*.mjs",
     "*.js",
     "*.d.ts"
   ],
