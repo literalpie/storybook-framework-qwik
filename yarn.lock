@@ -10622,6 +10622,7 @@ __metadata:
   resolution: "my-qwik-library-name@workspace:examples/qwik-kitchen-sink"
   dependencies:
     "@builder.io/qwik": 0.15.2
+    "@builder.io/qwik-city": ^0.0.128
     "@storybook/addon-essentials": ^7.0.0-beta.9
     "@storybook/addon-interactions": ^7.0.0-beta.9
     "@storybook/addon-links": ^7.0.0-beta.9
@@ -13155,6 +13156,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "storybook-framework-qwik@workspace:app/qwik"
   dependencies:
+    "@builder.io/qwik": ^0.15.2
+    "@builder.io/qwik-city": ^0.0.128
     "@storybook/addons": 7.0.0-beta.9
     "@storybook/builder-vite": 7.0.0-beta.9
     "@storybook/channel-postmessage": 7.0.0-beta.9
