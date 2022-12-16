@@ -10,7 +10,7 @@ This is a framework to allow using [Storybook](https://storybook.js.org/) with [
 
 
 ## Getting started
-* In an existing Qwik project, run `npx storybook@next init --type html` (Storybook 7 is required)
+* In an existing Qwik project, run `npx storybook@next init --type html --parser tsx` (Storybook 7 is required)
 * install this package with `npm install storybook-framework-qwik -D`
 * Tell storybook to use this package by adding it to main.js
 
