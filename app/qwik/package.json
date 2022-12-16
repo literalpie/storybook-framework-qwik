@@ -17,11 +17,12 @@
       "import": "./dist/preset.mjs",
       "types": "./dist/preset.d.ts"
     },
-    "./package.json": {
-      "require": "./package.json",
-      "import": "./package.json",
-      "types": "./package.json"
-    }
+    "./preview": {
+      "require": "./dist/preview.js",
+      "import": "./dist/preview.mjs",
+      "types": "./dist/preview.d.ts"
+    },
+    "./package.json": "./package.json"
   },
   "homepage": "TODO",
   "bugs": {
@@ -38,10 +39,11 @@
     "*.d.ts"
   ],
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepare": "node ../../scripts/prepare.js"
+    "prepare": "node ../../scripts/prepare.js",
+    "watch": "tsc --watch --outDir ./dist --listEmittedFiles"
   },
   "dependencies": {
     "@storybook/addons": "7.0.0-beta.9",
