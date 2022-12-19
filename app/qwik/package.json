@@ -54,18 +54,13 @@
     "build": "tsc --outDir ./dist --listEmittedFiles"
   },
   "dependencies": {
-    "@builder.io/qwik": "^0.15.2",
-    "@builder.io/qwik-city": "^0.0.128",
-    "@storybook/addons": "7.0.0-beta.9",
-    "@storybook/builder-vite": "7.0.0-beta.9",
-    "@storybook/channel-postmessage": "7.0.0-beta.9",
-    "@storybook/channel-websocket": "7.0.0-beta.9",
-    "@storybook/client-api": "7.0.0-beta.9",
-    "@storybook/core-server": "7.0.0-beta.9",
-    "@storybook/html": "7.0.0-beta.9",
-    "@storybook/node-logger": "7.0.0-beta.9",
-    "@storybook/preview-web": "7.0.0-beta.9",
-    "magic-string": "^0.26.1"
+    "@storybook/builder-vite": "^7.0.0-beta.9"
+  },
+  "peerDependencies": {
+    "@builder.io/qwik": "^0.15.2"
+  },
+  "optionalDependencies": {
+    "@builder.io/qwik-city": "^0.0.128"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",

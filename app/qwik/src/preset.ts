@@ -1,13 +1,13 @@
 import type { StorybookConfig } from '@storybook/builder-vite';
 import { mergeConfig } from 'vite';
 import { QWIK_LOADER } from '@builder.io/qwik/loader';
+
 export const core: StorybookConfig['core'] = {
   builder: '@storybook/builder-vite',
-  renderer: '@storybook/html',
+  renderer: 'storybook-framework-qwik',
 };
 
 export const viteFinal: StorybookConfig['viteFinal'] = async (defaultConfig, options) => {
-  console.log('VITE THING');
   const config = mergeConfig(defaultConfig, {
     build: {
       target: 'es2020',

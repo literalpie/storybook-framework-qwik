@@ -2,7 +2,7 @@ import Header from './header';
 
 export default {
   title: 'Story Example',
-  component: () => <Header />,
+  component: Header,
 };
 
 export const Default = {};
