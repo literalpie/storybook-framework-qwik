@@ -1995,7 +1995,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-vite@npm:^7.0.0-beta.9":
+"@storybook/builder-vite@npm:^7.0.0-beta.7":
   version: 7.0.0-beta.12
   resolution: "@storybook/builder-vite@npm:7.0.0-beta.12"
   dependencies:
@@ -9832,7 +9832,7 @@ __metadata:
   resolution: "storybook-framework-qwik@workspace:app/qwik"
   dependencies:
     "@builder.io/qwik-city": ^0.0.128
-    "@storybook/builder-vite": ^7.0.0-beta.9
+    "@storybook/builder-vite": ^7.0.0-beta.7
     "@types/node": ^16.0.0
     typescript: ~4.9.3
   peerDependencies:
