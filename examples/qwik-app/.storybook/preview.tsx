@@ -1,4 +1,5 @@
-export const decorators = [];
+import { qwikCityDecorator } from 'storybook-framework-qwik/qwik-city-decorator';
+export const decorators = [qwikCityDecorator];
 export const parameters = {
   a11y: {
     config: {},
