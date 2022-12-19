@@ -14,3 +14,5 @@ export const parameters = {
     iframeHeight: '200px',
   },
 };
+
+import '../src/global.css';
