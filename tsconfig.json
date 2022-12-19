@@ -9,6 +9,7 @@
     "jsx": "react",
     "module": "commonjs",
     "skipDefaultLibCheck": true,
+    "declaration": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

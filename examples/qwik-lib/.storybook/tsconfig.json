@@ -3,7 +3,6 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "Node16",
     "module": "CommonJS",
     "rootDir": "../"
   },
@@ -13,6 +12,7 @@
     "../src/**/*.stories.tsx",
     "../src/**/*.stories.mdx",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "main.js"
   ]
 }
