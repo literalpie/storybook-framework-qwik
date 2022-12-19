@@ -6,3 +6,4 @@ export default {
 };
 
 export const Default = {};
+export const WithTitle = { args: { title: 'Test Title' } };

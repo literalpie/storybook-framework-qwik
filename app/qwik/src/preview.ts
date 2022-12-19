@@ -11,7 +11,7 @@ const { FRAMEWORK_OPTIONS } = global;
 /** Wraps story in QwikCityMockProvider */
 const qwikCityDecorator = (Story: () => JSXNode, context: StoryContext) => {
   const storyNode = Story();
-  // equal to <QwikCityMockProvider></Story></QwikCityMockProvider>
+  // equal to <QwikCityMockProvider><Story/></QwikCityMockProvider>
   const tree = _jsx(
     QwikCityMockProvider,
     {
@@ -42,8 +42,13 @@ export async function renderToCanvas<T>(
   const container = document.createElement('div');
   const tree = _jsx(storyFn, {}, 'qwik-story');
   await renderQwik(container, tree);
-  canvasElement.childNodes.forEach((n) => n.remove());
-  canvasElement.append(container);
+  // If this isn't the first time rendering this story, refresh the iframe.
+  // Ideally, this would use hot module replacement instead.
+  if (canvasElement.childNodes.length > 0) {
+    document.location.reload();
+  } else {
+    canvasElement.append(container);
+  }
 
   showMain();
 }
