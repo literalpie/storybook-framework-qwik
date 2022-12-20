@@ -1,6 +1,8 @@
 import { qwikCityDecorator } from 'storybook-framework-qwik/qwik-city-decorator';
-export const decorators = [qwikCityDecorator];
-export const parameters = {
+import { Decorator } from 'storybook-framework-qwik';
+import { Parameters } from '@storybook/types';
+export const decorators: Decorator[] = [qwikCityDecorator];
+export const parameters: Parameters = {
   a11y: {
     config: {},
     options: {

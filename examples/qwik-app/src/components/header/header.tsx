@@ -2,7 +2,8 @@ import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import { QwikLogo } from '../icons/qwik';
 import styles from './header.css?inline';
 
-export default component$(({ title }: { title: string }) => {
+export type HeaderProps = { title: string };
+export const Header = component$(({ title }: HeaderProps) => {
   useStylesScoped$(styles);
 
   return (

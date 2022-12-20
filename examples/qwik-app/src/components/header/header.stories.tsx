@@ -1,9 +1,11 @@
-import Header from './header';
+import { Header, HeaderProps } from './header';
+import { Meta, StoryObj } from 'storybook-framework-qwik';
 
 export default {
   title: 'Story Example',
   component: Header,
-};
+  args: {},
+} as Meta<HeaderProps>;
 
-export const Default = {};
-export const WithTitle = { args: { title: 'Test Title' } };
+export const Default: StoryObj<HeaderProps> = {};
+export const WithTitle: StoryObj<HeaderProps> = { args: { title: 'Test Title' } };
