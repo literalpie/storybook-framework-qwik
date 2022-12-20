@@ -1,11 +1,11 @@
 import { render as renderQwik } from '@builder.io/qwik';
 import { jsx as _jsx } from '@builder.io/qwik/jsx-runtime';
 import { ArgsStoryFn, RenderContext, WebRenderer } from '@storybook/types';
-import { QwikRender } from './types.js';
+import { QwikRenderer } from './types.js';
 
 // returns the Qwik component as a JSX element (</MyComponent>)
 // If a story has a custom renderer, it will replace this function.
-export const render: ArgsStoryFn<QwikRender<unknown>> = (args, context) => {
+export const render: ArgsStoryFn<QwikRenderer<unknown>> = (args, context) => {
   const { component } = context;
   if (typeof component === 'function') {
     return component(args, context.name);
@@ -15,8 +15,8 @@ export const render: ArgsStoryFn<QwikRender<unknown>> = (args, context) => {
 };
 
 export async function renderToCanvas<T>(
-  { storyFn, showMain, showError }: RenderContext<QwikRender<T>>,
-  canvasElement: WebRenderer['canvasElement']
+  { storyFn, showMain, showError }: RenderContext<QwikRenderer<T>>,
+  canvasElement: QwikRenderer<T>['canvasElement']
 ) {
   const container = document.createElement('div');
   const tree = _jsx(storyFn, {}, 'qwik-story');
