@@ -4,7 +4,7 @@ This is a framework to allow using [Storybook](https://storybook.js.org/) with [
 
 ## Limitations
 
-- This has only been tested with brand new Qwik applications and component libraries
+- This has only been tested with brand new Qwik applications and component libraries. This also hasn't been tested with a static build of storybook.
 - Story is completely reloaded when component is changed (no hot module repacement)
 - There is no automation yet for easily scaffolding storybook in a Qwik project.
 

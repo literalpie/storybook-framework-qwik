@@ -1,10 +1,16 @@
 {
   "name": "storybook-framework-qwik",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Storybook for Qwik: View Qwik components in isolation.",
   "keywords": [
     "storybook",
-    "qwik"
+    "hydration",
+    "resumable",
+    "qwik",
+    "reactive",
+    "framework",
+    "components",
+    "builder.io"
   ],
   "type": "module",
   "//": "not sure why dist/preview is needed, but it is",
@@ -36,12 +42,13 @@
     },
     "./package.json": "./package.json"
   },
-  "homepage": "TODO",
+  "homepage": "https://github.com/literalpie/storybook-framework-qwik",
   "bugs": {
-    "//": "TODO"
+    "url": "https://github.com/literalpie/storybook-framework-qwik"
   },
   "repository": {
     "type": "git",
+    "url": "https://github.com/literalpie/storybook-framework-qwik.git",
     "directory": "app/qwik"
   },
   "license": "MIT",

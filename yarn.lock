@@ -11006,66 +11006,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"my-qwik-basic-starter@workspace:examples/qwik-app":
-  version: 0.0.0-use.local
-  resolution: "my-qwik-basic-starter@workspace:examples/qwik-app"
-  dependencies:
-    "@builder.io/qwik": 0.15.2
-    "@builder.io/qwik-city": 0.0.128
-    "@storybook/addon-a11y": 7.0.0-beta.9
-    "@storybook/builder-vite": 7.0.0-beta.9
-    "@storybook/html-vite": ^7.0.0-alpha.58
-    "@types/eslint": 8.4.10
-    "@types/node": latest
-    "@typescript-eslint/eslint-plugin": 5.45.0
-    "@typescript-eslint/parser": 5.45.0
-    eslint: 8.28.0
-    eslint-plugin-qwik: 0.15.2
-    node-fetch: 3.3.0
-    prettier: 2.8.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    storybook: 7.0.0-beta.9
-    storybook-framework-qwik: "*"
-    typescript: 4.9.3
-    vite: 3.2.4
-    vite-tsconfig-paths: 3.5.0
-  languageName: unknown
-  linkType: soft
-
-"my-qwik-library-name@workspace:examples/qwik-lib":
-  version: 0.0.0-use.local
-  resolution: "my-qwik-library-name@workspace:examples/qwik-lib"
-  dependencies:
-    "@builder.io/qwik": 0.16.1
-    "@storybook/addon-essentials": 7.0.0-beta.9
-    "@storybook/addon-interactions": 7.0.0-beta.9
-    "@storybook/addon-links": 7.0.0-beta.9
-    "@storybook/blocks": 7.0.0-beta.9
-    "@storybook/html": 7.0.0-beta.9
-    "@storybook/html-vite": 7.0.0-beta.9
-    "@storybook/testing-library": ^0.0.13
-    "@types/eslint": 8.4.10
-    "@types/node": ^18.11.16
-    "@types/node-fetch": latest
-    "@typescript-eslint/eslint-plugin": 5.46.1
-    "@typescript-eslint/parser": 5.46.1
-    eslint: 8.30.0
-    eslint-plugin-qwik: latest
-    eslint-plugin-storybook: ^0.6.8
-    node-fetch: 3.3.0
-    np: 7.6.1
-    prettier: 2.8.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    storybook: 7.0.0-beta.9
-    storybook-framework-qwik: "*"
-    typescript: 4.9.4
-    undici: 5.14.0
-    vite: 4.0.1
-  languageName: unknown
-  linkType: soft
-
 "mz@npm:^2.7.0":
   version: 2.7.0
   resolution: "mz@npm:2.7.0"
@@ -12195,6 +12135,67 @@ __metadata:
   checksum: a516faa25574be7947969883e6068dbe4aa19e8ef8e8e0fd96cddd6d36485e9106d85c0041a27153286b0770b381328f4072aa40d3b18a19f5f7d2b78b94b5ed
   languageName: node
   linkType: hard
+
+"qwik-app@workspace:examples/qwik-app":
+  version: 0.0.0-use.local
+  resolution: "qwik-app@workspace:examples/qwik-app"
+  dependencies:
+    "@builder.io/qwik": 0.15.2
+    "@builder.io/qwik-city": 0.0.128
+    "@storybook/addon-a11y": 7.0.0-beta.9
+    "@storybook/builder-vite": 7.0.0-beta.9
+    "@storybook/html-vite": ^7.0.0-alpha.58
+    "@types/eslint": 8.4.10
+    "@types/node": latest
+    "@typescript-eslint/eslint-plugin": 5.45.0
+    "@typescript-eslint/parser": 5.45.0
+    eslint: 8.28.0
+    eslint-plugin-qwik: 0.15.2
+    node-fetch: 3.3.0
+    prettier: 2.8.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    storybook: 7.0.0-beta.9
+    storybook-framework-qwik: "*"
+    typescript: 4.9.3
+    vite: 3.2.4
+    vite-tsconfig-paths: 3.5.0
+  languageName: unknown
+  linkType: soft
+
+"qwik-lib@workspace:examples/qwik-lib":
+  version: 0.0.0-use.local
+  resolution: "qwik-lib@workspace:examples/qwik-lib"
+  dependencies:
+    "@builder.io/qwik": 0.16.1
+    "@builder.io/qwik-city": 0.0.128
+    "@storybook/addon-essentials": 7.0.0-beta.9
+    "@storybook/addon-interactions": 7.0.0-beta.9
+    "@storybook/addon-links": 7.0.0-beta.9
+    "@storybook/blocks": 7.0.0-beta.9
+    "@storybook/html": 7.0.0-beta.9
+    "@storybook/html-vite": 7.0.0-beta.9
+    "@storybook/testing-library": ^0.0.13
+    "@types/eslint": 8.4.10
+    "@types/node": ^18.11.16
+    "@types/node-fetch": latest
+    "@typescript-eslint/eslint-plugin": 5.46.1
+    "@typescript-eslint/parser": 5.46.1
+    eslint: 8.30.0
+    eslint-plugin-qwik: latest
+    eslint-plugin-storybook: ^0.6.8
+    node-fetch: 3.3.0
+    np: 7.6.1
+    prettier: 2.8.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    storybook: 7.0.0-beta.9
+    storybook-framework-qwik: "*"
+    typescript: 4.9.4
+    undici: 5.14.0
+    vite: 4.0.1
+  languageName: unknown
+  linkType: soft
 
 "ramda@npm:^0.28.0":
   version: 0.28.0

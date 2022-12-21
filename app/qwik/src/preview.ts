@@ -1,6 +1,6 @@
 import { render as renderQwik } from '@builder.io/qwik';
 import { jsx as _jsx } from '@builder.io/qwik/jsx-runtime';
-import { ArgsStoryFn, RenderContext, WebRenderer } from '@storybook/types';
+import { ArgsStoryFn, RenderContext } from '@storybook/types';
 import { QwikRenderer } from './types.js';
 
 // returns the Qwik component as a JSX element (</MyComponent>)
