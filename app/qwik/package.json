@@ -42,6 +42,16 @@
     },
     "./package.json": "./package.json"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ],
+      "qwik-city-decorator": [
+        "./dist/qwik-city-decorator.d.ts"
+      ]
+    }
+  },
   "homepage": "https://github.com/literalpie/storybook-framework-qwik",
   "bugs": {
     "url": "https://github.com/literalpie/storybook-framework-qwik"
