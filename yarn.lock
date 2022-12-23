@@ -12143,6 +12143,7 @@ __metadata:
     "@builder.io/qwik": 0.15.2
     "@builder.io/qwik-city": 0.0.128
     "@storybook/addon-a11y": 7.0.0-beta.9
+    "@storybook/addon-essentials": 7.0.0-beta.9
     "@storybook/builder-vite": 7.0.0-beta.9
     "@storybook/html-vite": ^7.0.0-alpha.58
     "@types/eslint": 8.4.10
