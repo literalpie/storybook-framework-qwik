@@ -65,6 +65,7 @@
   "files": [
     "README.md",
     "./dist/*.js",
+    "./template/cli/**",
     "*.js",
     "*.d.ts",
     "./dist/*.d.ts"
