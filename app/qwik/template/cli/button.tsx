@@ -23,7 +23,6 @@ export interface ButtonProps {
   /**
    * Optional click handler
    */
-  // onClick$?: QRL<(event: any) => void>;
   onClick$?: QRL<onClickEvent> | undefined;
 }
 
