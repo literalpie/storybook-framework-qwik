@@ -53,3 +53,6 @@ export const decorators = [qwikCityDecorator];
 You can also add the decorator to individual stories or story files.
 
 Because this framework is shipped only as an ESM module, this may require that you add `"type": "module"` to your `package.json` (or create a package.json inside your .storybook folder to only make this setting apply to storybook).
+
+## Credit
+Many parts of this package are based on code that I got from [this PR](https://github.com/BuilderIO/qwik/pull/2381), which got some ideas from [this discussion](https://github.com/BuilderIO/qwik/discussions/787).
