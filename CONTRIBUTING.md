@@ -2,6 +2,8 @@
 
 PRs welcome, Contributions appreciated, blah blah blah.
 
+I would especially appreciate contributions on issues marked "help wanted" or "high priority".
+
 ## Building and Testing
 
 At the root of the repo, run `yarn workspace storybook-framework-qwik build` to build the actual package once, or `yarn workspace storybook-framework-qwik watch` to build in watch mode.
