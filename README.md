@@ -12,11 +12,11 @@ This is a framework to allow using [Storybook](https://storybook.js.org/) with [
 
 - In an existing Qwik project, run `npx storybook@next init --type html --parser ts` (Storybook 7 is required)
 - install this package with `npm install storybook-framework-qwik -D`
-- Tell storybook to use this package by adding it to main.js
+- Tell storybook to use this package by adding it to main.js, and prevent it from picking up unsupported mdx files by removing `*.mdx` from `stories` (See [issue #17](https://github.com/literalpie/storybook-framework-qwik/issues/17))
 
 ```
 module.exports = {
-  stories: [...],
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [...],
   framework: {
     name: "storybook-framework-qwik",
