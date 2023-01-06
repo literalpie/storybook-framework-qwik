@@ -1,6 +1,6 @@
 {
   "name": "storybook-framework-qwik",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Storybook for Qwik: View Qwik components in isolation.",
   "keywords": [
     "storybook",
@@ -64,6 +64,7 @@
   "license": "MIT",
   "files": [
     "README.md",
+    "./preset.js",
     "./dist/*.js",
     "./template/cli/**",
     "*.js",
