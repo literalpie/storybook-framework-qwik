@@ -1,11 +1,13 @@
-import { component$, Signal } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 
-export type ReactiveComponentProps = { state: Signal<number> };
+export type ReactiveComponentProps = { state: { number: number } };
 export const ReactiveComponent = component$(({ state }: ReactiveComponentProps) => {
   return (
     <div>
-      {state?.value}
-      <button onClick$={() => (state !== undefined ? (state.value += 1) : void 0)}>increase</button>
+      {state?.number}
+      <button onClick$={() => (state !== undefined ? (state.number += 1) : void 0)}>
+        increase
+      </button>
     </div>
   );
 });
