@@ -1,5 +1,4 @@
-import { render as renderQwik, RenderOnce } from '@builder.io/qwik';
-import { jsx as _jsx } from '@builder.io/qwik/jsx-runtime';
+import { render as renderQwik } from '@builder.io/qwik';
 import { ArgsStoryFn, RenderContext } from '@storybook/types';
 import { QwikRenderer } from './types.js';
 
@@ -15,12 +14,11 @@ export const render: ArgsStoryFn<QwikRenderer<unknown>> = (args, context) => {
 };
 
 export async function renderToCanvas<T>(
-  { storyFn, showMain, showError }: RenderContext<QwikRenderer<T>>,
+  { storyFn, showMain }: RenderContext<QwikRenderer<T>>,
   canvasElement: QwikRenderer<T>['canvasElement']
 ) {
   const container = document.createElement('div');
-  const tree = _jsx(storyFn, {}, 'qwik-story');
-  await renderQwik(container, tree);
+  await renderQwik(container, storyFn());
   canvasElement.childNodes.forEach((c) => c.remove());
   canvasElement.append(container);
 
