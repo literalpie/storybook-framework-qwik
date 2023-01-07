@@ -28,7 +28,7 @@ module.exports = {
 
 ```
 
-- A stories folder with incompatible HTML stories will be created by the first step. Remove them, or replace them with Qwik stories:
+- A stories folder with incompatible HTML stories will be created by the first step. Remove them, or replace them with Qwik stories (see examples below).
 
 - If desired, import global app styles in `preview.js`: `import "../src/global.css";`
 
