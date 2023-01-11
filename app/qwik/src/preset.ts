@@ -12,7 +12,7 @@ export const viteFinal: StorybookConfig['viteFinal'] = async (defaultConfig, opt
     build: {
       target: 'es2020',
       rollupOptions: {
-        external: ['@qwik-city-sw-register', '@qwik-city-plan'],
+        external: ['@qwik-city-plan'],
       },
     },
   });
