@@ -5,6 +5,7 @@ export default {
   title: 'Story Example',
   component: Header,
   args: {},
+  tags: ['docsPage'],
 } as Meta<HeaderProps>;
 
 export const Default: StoryObj<HeaderProps> = {};

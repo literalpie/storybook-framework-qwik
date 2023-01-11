@@ -1,0 +1,13 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/blocks';
+import { Header } from './header.tsx';
+import * as HeaderStories from './header.stories.tsx';
+
+<Meta of={HeaderStories} />
+
+Header stories! Huzzah!!!
+
+<Canvas isColumn>
+  <Story of={HeaderStories.Default} />
+  <Story of={HeaderStories.WithTitle} />
+  <Story of={HeaderStories.Default} />
+</Canvas>
