@@ -5,16 +5,14 @@ This is a framework to allow using [Storybook](https://storybook.js.org/) with [
 ## Limitations
 
 - This has only been tested with brand new Qwik applications and component libraries. This also hasn't been tested with a static build of storybook.
-- Story is completely reloaded when component is changed (no hot module repacement)
+- Story is completely reloaded when component is changed (no hot module replacement)
 - There is no automation yet for easily scaffolding storybook in a Qwik project.
-- MDX stories are not supported
 - Stories are run in dev mode - no SSR, or serialization happens
 
 ## Setup
 
 - In an existing Qwik project, run `npx storybook@next init --type html --parser ts` (Storybook 7 is required)
 - install this package with `npm install storybook-framework-qwik -D`
-- Tell storybook to use this package by adding it to main.js, and prevent it from picking up unsupported mdx files by removing `*.mdx` from `stories` (See [issue #17](https://github.com/literalpie/storybook-framework-qwik/issues/17))
 
 ```
 module.exports = {
