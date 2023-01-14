@@ -53,7 +53,7 @@ export const Button = component$<ButtonProps>(
     return (
       <button
         class={classes}
-        style={{ backgroundColor }}
+        style={backgroundColor ? { backgroundColor } : {}}
         onClick$={(event, element) => onClick$?.(event, element)}
       >
         <Slot />
