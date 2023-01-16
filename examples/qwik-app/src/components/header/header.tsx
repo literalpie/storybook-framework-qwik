@@ -1,10 +1,12 @@
 import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import { QwikLogo } from '../icons/qwik';
 import styles from './header.css?inline';
+import { useLocation } from '@builder.io/qwik-city';
 
 export type HeaderProps = { title: string };
 export const Header = component$(({ title }: HeaderProps) => {
   useStylesScoped$(styles);
+  const loc = useLocation();
 
   return (
     <header>
@@ -14,6 +16,7 @@ export const Header = component$(({ title }: HeaderProps) => {
         </a>
       </div>
       {title ? <h1 style={{ paddingTop: '4px' }}>{title}</h1> : null}
+      <div>Qwik City Location: {JSON.stringify(loc.href)}</div>
       <ul>
         <li>
           <a href="https://qwik.builder.io/docs/components/overview/" target="_blank">
