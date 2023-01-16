@@ -16,10 +16,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "chalk": "^3.0.0",
-    "shelljs": "^0.8.3"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@builder.io/qwik": "^0.16.2",
     "@builder.io/qwik-city": "^0.1.0-beta8"
