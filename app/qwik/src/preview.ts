@@ -25,7 +25,7 @@ export async function renderToCanvas<T>(
   showMain();
 }
 
-// I don't know how to to HMR stuff correctly, and Vite seems to keep referencing old files when you make a change.
+// I don't know how to do HMR stuff correctly, and Vite seems to keep referencing old files when you make a change.
 // Force a reload when vite notifies of an update as a dirty temporary workaround.
 const viteHotMeta: any = (import.meta as any).hot;
 if (viteHotMeta) {
