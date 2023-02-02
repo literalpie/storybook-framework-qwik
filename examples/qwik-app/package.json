@@ -25,8 +25,8 @@
     "test-storybook": "test-storybook"
   },
   "devDependencies": {
-    "@builder.io/qwik-city": "0.1.0-beta9",
     "@builder.io/qwik": "0.16.2",
+    "@builder.io/qwik-city": "0.1.0-beta9",
     "@storybook/addon-a11y": "7.0.0-beta.28",
     "@storybook/addon-essentials": "7.0.0-beta.28",
     "@storybook/addon-interactions": "^7.0.0-beta.28",
@@ -37,17 +37,16 @@
     "@types/node": "18.11.18",
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.48.1",
-    "eslint-plugin-qwik": "0.16.2",
     "eslint": "8.32.0",
+    "eslint-plugin-qwik": "0.16.2",
     "node-fetch": "3.3.0",
     "prettier": "2.8.3",
-    "react-dom": "^18.2.0",
     "react": "^18.2.0",
-    "storybook-framework-qwik": "*",
+    "react-dom": "^18.2.0",
     "storybook": "7.0.0-beta.28",
+    "storybook-framework-qwik": "*",
     "typescript": "4.9.4",
-    "vite-tsconfig-paths": "4.0.3",
-    "vite": "4.0.4"
-  },
-  "dependencies": {}
+    "vite": "4.0.4",
+    "vite-tsconfig-paths": "4.0.3"
+  }
 }

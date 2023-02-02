@@ -24,5 +24,6 @@
   "dependencies": {
     "@builder.io/qwik": "^0.16.2",
     "@builder.io/qwik-city": "^0.1.0-beta8"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }
