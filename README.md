@@ -11,24 +11,9 @@ This is a framework to allow using [Storybook](https://storybook.js.org/) with [
 
 ## Setup
 
-- In an existing Qwik project, run `npx storybook@next init --type html --parser ts` (Storybook 7 is required)
-- install this package with `npm install storybook-framework-qwik -D`
+In an existing Qwik project, run `npx storybook@next init` (Storybook 7 is required)
 
-```
-module.exports = {
-  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: [...],
-  framework: {
-    name: "storybook-framework-qwik",
-  },
-  docs: {...},
-};
-
-```
-
-- A stories folder with incompatible HTML stories will be created by the first step. Remove them, or replace them with Qwik stories (see examples below).
-
-- If desired, import global app styles in `preview.js`: `import "../src/global.css";`
+See the [Storybook Docs](https://storybook.js.org/docs/7.0/qwik/get-started/introduction) for the best documentation on getting started with Storybook.
 
 ## Usage
 
