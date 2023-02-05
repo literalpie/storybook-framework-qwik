@@ -1,5 +1,5 @@
 node_modules
-app/qwik/dist
+packages/*/dist
 pnp.*
 .yarn/*
 !.yarn/patches

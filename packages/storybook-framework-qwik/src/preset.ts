@@ -1,13 +1,13 @@
-import type { StorybookConfig } from '@storybook/builder-vite';
+import type { StorybookViteConfig } from '@storybook/builder-vite';
 import { mergeConfig } from 'vite';
 import { QWIK_LOADER } from '@builder.io/qwik/loader';
 
-export const core: StorybookConfig['core'] = {
+export const core: StorybookViteConfig['core'] = {
   builder: '@storybook/builder-vite',
   renderer: 'storybook-framework-qwik',
 };
 
-export const viteFinal: StorybookConfig['viteFinal'] = async (defaultConfig, options) => {
+export const viteFinal: StorybookViteConfig['viteFinal'] = async (defaultConfig, options) => {
   const config = mergeConfig(defaultConfig, {
     build: {
       target: 'es2020',
@@ -24,7 +24,7 @@ export const viteFinal: StorybookConfig['viteFinal'] = async (defaultConfig, opt
   return config;
 };
 
-export const previewAnnotations: StorybookConfig['previewAnnotations'] = (entry = []) => [
+export const previewAnnotations: StorybookViteConfig['previewAnnotations'] = (entry = []) => [
   ...entry,
   require.resolve('storybook-framework-qwik/preview.js'),
 ];
