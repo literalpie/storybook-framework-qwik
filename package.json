@@ -12,8 +12,7 @@
     "test": "concurrently --kill-others \"yarn workspace qwik-app storybook --no-open\" \"wait-on http://localhost:6006 && yarn workspace qwik-app test-storybook\""
   },
   "workspaces": [
-    "app/*",
-    "examples/*"
+    "packages/*"
   ],
   "author": "",
   "license": "MIT",

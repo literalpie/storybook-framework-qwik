@@ -32,7 +32,7 @@
     "release": "np",
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build"
   },
   "devDependencies": {
