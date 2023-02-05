@@ -8,8 +8,12 @@
     "example": "examples"
   },
   "scripts": {
-    "//": "start storybook, then when the port is available, start tests of all storybook stories",
-    "test": "concurrently --kill-others \"yarn workspace qwik-app storybook --no-open\" \"wait-on http://localhost:6006 && yarn workspace qwik-app test-storybook\""
+    "//test": "start storybook, then when the port is available, start tests of all storybook stories",
+    "test": "concurrently --kill-others \"yarn workspace qwik-app storybook --no-open\" \"wait-on http://localhost:6006 && yarn workspace qwik-app test-storybook\"",
+    "//dev": "start tsc build/watch, then when the files are available the first time, start storybook in the app (qwik-lib is less commonly used)",
+    "dev": "concurrently \"yarn watch\" \"wait-on ./packages/storybook-framework-qwik/dist/index.js && yarn workspace qwik-app storybook\"",
+    "watch": "yarn workspace storybook-framework-qwik watch",
+    "storybook": "yarn workspace qwik-app storybook"
   },
   "workspaces": [
     "packages/*"

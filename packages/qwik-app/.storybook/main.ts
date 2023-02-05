@@ -1,12 +1,16 @@
-const config = {
+import { StorybookConfig } from 'storybook-framework-qwik';
+
+const config: StorybookConfig = {
   addons: ['@storybook/addon-essentials'],
   stories: ['../src/**/*.docs.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   framework: {
     name: 'storybook-framework-qwik',
-    options: { qwikCity: false },
+  },
+  core: {
+    renderer: 'storybook-framework-qwik',
   },
   docs: {
-    docsPage: 'automatic',
+    autodocs: false,
   },
   staticDirs: ['../public'],
 };

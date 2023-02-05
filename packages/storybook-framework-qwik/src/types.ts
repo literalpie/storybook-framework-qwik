@@ -10,6 +10,7 @@ import type {
   LoaderFunction,
   StoryContext as GenericStoryContext,
   StrictArgs,
+  StorybookConfig as StorybookConfigBase,
 } from '@storybook/types';
 
 export interface QwikRenderer<T> extends WebRenderer {
@@ -41,3 +42,7 @@ export type StoryObj<TArgs = Args> = StoryAnnotations<QwikRenderer<TArgs>, TArgs
 export type Decorator<TArgs = StrictArgs> = DecoratorFunction<QwikRenderer<TArgs>, TArgs>;
 export type Loader<TArgs = StrictArgs> = LoaderFunction<QwikRenderer<TArgs>, TArgs>;
 export type StoryContext<TArgs = StrictArgs> = GenericStoryContext<QwikRenderer<TArgs>, TArgs>;
+
+export type StorybookConfig = Omit<StorybookConfigBase, 'framework'> & {
+  framework: 'storybook-framework-qwik' | { name: 'storybook-framework-qwik' };
+};
