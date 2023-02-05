@@ -1,5 +1,5 @@
 import { Header, HeaderProps } from './header';
-import { Meta, StoryObj } from 'storybook-framework-qwik';
+import { Meta, StoryObj } from '../../../../storybook-framework-qwik/dist';
 
 export default {
   title: 'Story Example',

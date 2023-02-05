@@ -12433,9 +12433,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qwik-app@workspace:examples/qwik-app":
+"qwik-app@workspace:packages/qwik-app":
   version: 0.0.0-use.local
-  resolution: "qwik-app@workspace:examples/qwik-app"
+  resolution: "qwik-app@workspace:packages/qwik-app"
   dependencies:
     "@builder.io/qwik": 0.17.4
     "@builder.io/qwik-city": 0.1.0-beta13
@@ -12463,9 +12463,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"qwik-lib@workspace:examples/qwik-lib":
+"qwik-lib@workspace:packages/qwik-lib":
   version: 0.0.0-use.local
-  resolution: "qwik-lib@workspace:examples/qwik-lib"
+  resolution: "qwik-lib@workspace:packages/qwik-lib"
   dependencies:
     "@builder.io/qwik": 0.17.4
     "@builder.io/qwik-city": 0.1.0-beta13
@@ -13602,9 +13602,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"storybook-framework-qwik@*, storybook-framework-qwik@workspace:app/qwik":
+"storybook-framework-qwik@*, storybook-framework-qwik@workspace:packages/storybook-framework-qwik":
   version: 0.0.0-use.local
-  resolution: "storybook-framework-qwik@workspace:app/qwik"
+  resolution: "storybook-framework-qwik@workspace:packages/storybook-framework-qwik"
   dependencies:
     "@builder.io/qwik-city": ">=0.0.128"
     "@storybook/builder-vite": ^7.0.0-beta.7

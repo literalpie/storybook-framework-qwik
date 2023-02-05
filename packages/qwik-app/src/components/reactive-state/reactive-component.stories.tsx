@@ -1,5 +1,5 @@
 import { ReactiveComponent, ReactiveComponentProps } from './reactive-component';
-import { Meta, StoryObj } from 'storybook-framework-qwik';
+import { Meta, StoryObj } from '../../../../storybook-framework-qwik/dist';
 import { component$, useStore } from '@builder.io/qwik';
 import { within, userEvent, waitFor } from '@storybook/testing-library';
 
