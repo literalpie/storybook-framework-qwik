@@ -1,6 +1,4 @@
-import type { StorybookConfig } from '@storybook/builder-vite';
-
-const config: StorybookConfig = {
+const config = {
   addons: ['@storybook/addon-essentials'],
   stories: ['../src/**/*.docs.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   framework: {
@@ -10,5 +8,6 @@ const config: StorybookConfig = {
   docs: {
     docsPage: 'automatic',
   },
+  staticDirs: ['../public'],
 };
 export default config;
