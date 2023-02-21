@@ -79,7 +79,7 @@
     "build": "tsc --outDir ./dist --listEmittedFiles"
   },
   "dependencies": {
-    "@storybook/builder-vite": "^7.0.0-beta.53"
+    "@storybook/builder-vite": "^7.0.0-beta.7"
   },
   "peerDependencies": {
     "@builder.io/qwik": ">=0.15.2"
