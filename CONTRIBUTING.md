@@ -2,7 +2,7 @@
 
 PRs welcome, Contributions appreciated, blah blah blah.
 
-I would especially appreciate contributions on issues marked "help wanted" or "high priority".
+I would especially appreciate contributions to issues marked "help wanted" or "high priority".
 
 Comment on an issue if you would like any information or help! I'm happy to chat, or even do a short video call if it is helpful to pair on something. I'm also available in the Qwik and Storybook Discords, `@literalpie`.
 
