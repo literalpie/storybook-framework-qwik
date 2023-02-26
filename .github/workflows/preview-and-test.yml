@@ -7,7 +7,7 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 jobs:
   preview:
-    name: Preview and Storybook Test
+    name: Preview and Test
     runs-on: ubuntu-latest
     environment:
       name: Storybook Preview
@@ -28,6 +28,10 @@ jobs:
           cd ${{ github.workspace }}
           yarn install --immutable
 
+      - name: Lint
+        run: |
+          yarn lint-all
+
       - name: Deploy
         run: |
           yarn vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
@@ -35,7 +39,7 @@ jobs:
           yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
       - id: deploy
         run: echo "url=$(yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> "$GITHUB_OUTPUT"
-      - name: Test
+      - name: Storybook Test
         run: |
           yarn workspace qwik-app test-storybook
         env:

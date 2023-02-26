@@ -14,6 +14,7 @@
     "dev": "concurrently \"yarn watch\" \"wait-on ./packages/storybook-framework-qwik/dist/index.js && yarn workspace qwik-app storybook\"",
     "watch": "yarn workspace storybook-framework-qwik watch",
     "build": "yarn workspace storybook-framework-qwik build",
+    "lint-all": "yarn workspaces foreach run fmt.check && yarn workspaces foreach run lint",
     "storybook": "yarn workspace qwik-app storybook"
   },
   "workspaces": [
