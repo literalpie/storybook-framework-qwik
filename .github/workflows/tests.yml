@@ -1,22 +1,22 @@
-- name: Tests
-  uses: actions/setup-node@v3
-  with:
-    node-version: '18'
-    cache: 'yarn'
-  on: []
+name: Tests
+on: []
 
-  jobs:
-    Build-And-Test:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Check out repository code
-          uses: actions/checkout@v3
-        - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-        - run: cd ${{ github.workspace }}
-        - name: Set up code
-          run: yarn
-        - name: Build
-          run: yarn build
-        - name: Run Tests
-          run: yarn test
-        - run: echo "🍏 This job's status is ${{ job.status }}."
+jobs:
+  Build-And-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'yarn'
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: cd ${{ github.workspace }}
+      - name: Set up code
+        run: yarn
+      - name: Build
+        run: yarn build
+      - name: Run Tests
+        run: yarn test
+      - run: echo "🍏 This job's status is ${{ job.status }}."
