@@ -11,3 +11,4 @@ pnp.*
 # Storybook
 **/storybook-static
 storybook-static
+.vercel
