@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "incremental": true,
     "isolatedModules": true,
+    "noEmit": true,
     "types": ["vite/client"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "files": ["./.eslintrc.cjs"]
 }
