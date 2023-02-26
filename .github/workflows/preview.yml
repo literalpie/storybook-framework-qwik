@@ -1,5 +1,5 @@
 name: Vercel Preview
-on: 
+on:
   pull_request:
   workflow_dispatch:
 env:
@@ -7,23 +7,28 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 jobs:
   preview:
-    uses: actions/checkout@v3
-    # uses: actions/setup-node@v3
-    #   with:
-    #     - node-version: 18
-    #     - cache: yarn
     runs-on: ubuntu-latest
     environment:
-      name: preview
+      name: Preview
       url: ${{ steps.deploy.outputs.url }}
     steps:
-      - name: Set Up
-        run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-        run: cd ${{ github.workspace }}
-        run: yarn install --immutable
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set Up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+        run: |
+          echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+          cd ${{ github.workspace }}
+          yarn install --immutable
+
       - name: Deploy
-        - run: yarn vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
-        - run: yarn vercel build --token=${{ secrets.VERCEL_TOKEN }}
-        - run: yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
-        - id: deploy
-          run: echo "::set-output name=url::$(yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})"
+        run: |
+          yarn vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
+          yarn vercel build --token=${{ secrets.VERCEL_TOKEN }}
+          yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - id: deploy
+        run: echo "::set-output name=url::$(yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})"
