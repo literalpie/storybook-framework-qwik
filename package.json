@@ -13,6 +13,7 @@
     "//dev": "start tsc build/watch, then when the files are available the first time, start storybook in the app (qwik-lib is less commonly used)",
     "dev": "concurrently \"yarn watch\" \"wait-on ./packages/storybook-framework-qwik/dist/index.js && yarn workspace qwik-app storybook\"",
     "watch": "yarn workspace storybook-framework-qwik watch",
+    "build": "yarn workspace storybook-framework-qwik build",
     "storybook": "yarn workspace qwik-app storybook"
   },
   "workspaces": [
