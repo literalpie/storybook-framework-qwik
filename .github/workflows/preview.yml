@@ -10,7 +10,7 @@ jobs:
     name: Preview and Storybook Test
     runs-on: ubuntu-latest
     environment:
-      name: Preview
+      name: Storybook Preview
       url: ${{ steps.deploy.outputs.url }}
 
     steps:
