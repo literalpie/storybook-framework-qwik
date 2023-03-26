@@ -1,6 +1,6 @@
 {
   "name": "storybook-framework-qwik",
-  "version": "0.0.8",
+  "version": "0.0.0-development",
   "description": "Storybook for Qwik: View Qwik components in isolation.",
   "keywords": [
     "storybook",
@@ -76,7 +76,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "watch": "tsc --watch --outDir ./dist --listEmittedFiles",
-    "build": "tsc --outDir ./dist --listEmittedFiles"
+    "build": "tsc --outDir ./dist --listEmittedFiles",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@storybook/builder-vite": ">=7.0.0-beta.7"
@@ -89,6 +90,7 @@
   },
   "devDependencies": {
     "@types/node": "^18",
+    "semantic-release": "^21.0.0",
     "typescript": "~5.0.2",
     "vite": "^4.2.1"
   },
