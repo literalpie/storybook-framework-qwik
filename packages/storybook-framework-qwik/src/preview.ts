@@ -1,5 +1,6 @@
 import { render as renderQwik } from '@builder.io/qwik';
 import { ArgsStoryFn, RenderContext } from '@storybook/types';
+import { componentToJSX } from './component-to-jsx.js';
 import { QwikRenderer } from './types.js';
 
 // returns the Qwik component as a JSX element (</MyComponent>)
@@ -7,9 +8,8 @@ import { QwikRenderer } from './types.js';
 export const render: ArgsStoryFn<QwikRenderer<unknown>> = (args, context) => {
   const { component } = context;
   if (typeof component === 'function') {
-    return component(args, context.name);
+    return componentToJSX(component, args);
   }
-
   return component;
 };
 
