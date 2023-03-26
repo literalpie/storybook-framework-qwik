@@ -17,15 +17,15 @@ export const RouterHead = component$(() => {
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
       {head.meta.map((m) => (
-        <meta {...m} />
+        <meta {...m} key={m.key} />
       ))}
 
       {head.links.map((l) => (
-        <link {...l} />
+        <link {...l} key={l.key} />
       ))}
 
       {head.styles.map((s) => (
-        <style {...s.props} dangerouslySetInnerHTML={s.style} />
+        <style {...s.props} dangerouslySetInnerHTML={s.style} key={s.key} />
       ))}
     </>
   );
