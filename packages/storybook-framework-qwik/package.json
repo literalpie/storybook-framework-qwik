@@ -1,6 +1,6 @@
 {
   "name": "storybook-framework-qwik",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Storybook for Qwik: View Qwik components in isolation.",
   "keywords": [
     "storybook",
@@ -76,7 +76,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "watch": "tsc --watch --outDir ./dist --listEmittedFiles",
-    "build": "tsc --outDir ./dist --listEmittedFiles"
+    "build": "tsc --outDir ./dist --listEmittedFiles",
+    "//semantic-release": "this should be a GHA eventually. I only made this work once locally using tokens in env vars",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@storybook/builder-vite": ">=7.0.0-beta.7"
@@ -88,7 +90,9 @@
     "@builder.io/qwik-city": ">=0.0.128"
   },
   "devDependencies": {
+    "@suin/semantic-release-yarn": "1.1.0",
     "@types/node": "^18",
+    "semantic-release": "^21.0.0",
     "typescript": "~5.0.2",
     "vite": "^4.2.1"
   },
