@@ -9,7 +9,7 @@ const config = {
     name: 'storybook-framework-qwik',
   },
   docs: {
-    docsPage: true,
+    autodocs: "tag"
   },
 };
 
