@@ -1,6 +1,7 @@
 import { render as renderQwik } from '@builder.io/qwik';
 import { ArgsStoryFn, RenderContext } from '@storybook/types';
 import { QwikRenderer } from './types.js';
+import { componentToJSX } from './component-to-jsx.js';
 export { parameters, argTypesEnhancers } from "./docs/config.js"
 
 // returns the Qwik component as a JSX element (</MyComponent>)
@@ -8,10 +9,7 @@ export { parameters, argTypesEnhancers } from "./docs/config.js"
 export const render: ArgsStoryFn<QwikRenderer<unknown>> = (args, context) => {
   const { component } = context;
   if (typeof component === 'function') {
-    // NEEDS REVIEW: When using 'componentToJSX' the component prop values will not update when value is changed
-    // inside the Storybook controls so I changed it back to the original and ensured a flag value is passed to function.
-    // I'm not sure exactly what 'flags' are but have not detected any changes in behavior after this change.
-    return component(args, context.name, 0);
+    return componentToJSX(component, args);
   }
   return component;
 };
@@ -24,7 +22,6 @@ export async function renderToCanvas<T>(
   await renderQwik(container, storyFn());
   canvasElement.childNodes.forEach((c) => c.remove());
   canvasElement.append(container);
-
   showMain();
 }
 

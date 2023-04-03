@@ -10,7 +10,7 @@ function getComponentName(component: FunctionComponent): string {
 
 function getComponentDoc(component: FunctionComponent): ComponentDoc {
   const displayName = getComponentName(component);
-  return parent.__STORYBOOK_COMPONENT_DOC__.find((componentDoc) => componentDoc.displayName  === displayName);
+  return window.__STORYBOOK_COMPONENT_DOC__.get(displayName);
 }
 
 function extractComponentDescription(component: FunctionComponent): string {
@@ -30,11 +30,11 @@ function extractArgTypes(component: FunctionComponent): StrictArgTypes {
       },
       table: {
         type: {
-            summary: value.type.name,
-            required: value.required,
+          summary: value.type.name,
+          required: value.required,
         },
         defaultValue: {
-            summary: value.defaultValue,
+          summary: value.defaultValue?.value,
         }
       }
     }

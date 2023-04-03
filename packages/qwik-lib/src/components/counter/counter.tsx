@@ -7,9 +7,6 @@ export interface CounterProps {
   step?: number;
 }
 
-/** With docs */
-export const CONST = "Hello"
-
 /**
  * Declare a Qwik component that can be used to create UI.
  *
@@ -68,9 +65,9 @@ export const Counter = component$((props: CounterProps) => {
   );
 });
 
-/** Hello  */
-export const Lite = () => {
+/** Component in the same file */
+export const SameFileComponent = () => {
   return (
-    <div>Hello</div>
+    <div>SameFileComponent</div>
   )
 }
