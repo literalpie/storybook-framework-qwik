@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     renderer: 'storybook-framework-qwik',
   },
   docs: {
-    autodocs: "tag"
+    autodocs: 'tag',
   },
   staticDirs: ['../public'],
 };

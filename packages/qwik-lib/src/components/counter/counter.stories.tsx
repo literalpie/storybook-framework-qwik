@@ -5,7 +5,7 @@ import { Counter, CounterProps } from './counter';
 export default {
   title: 'Counter',
   component: Counter,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<CounterProps>;
 
 /** Test case: Should display this documentation */
@@ -16,9 +16,9 @@ export const Render: StoryObj<CounterProps> = {
   render: (args) => {
     return (
       <>
-        <Lite prop='Hello'/>
+        <Lite prop="Hello" />
         <Counter {...args} />
       </>
-    )
-  }
+    );
+  },
 };

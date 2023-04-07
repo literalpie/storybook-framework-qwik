@@ -67,7 +67,5 @@ export const Counter = component$((props: CounterProps) => {
 
 /** Component in the same file */
 export const SameFileComponent = () => {
-  return (
-    <div>SameFileComponent</div>
-  )
-}
+  return <div>SameFileComponent</div>;
+};

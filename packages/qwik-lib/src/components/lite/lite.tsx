@@ -3,8 +3,6 @@ export interface LiteProps {
 }
 
 /** Lite component */
-export const Lite = ({ prop = "default" }: LiteProps) => {
-  return (
-    <div>Lite: {prop}</div>
-  )
-}
+export const Lite = ({ prop = 'default' }: LiteProps) => {
+  return <div>Lite: {prop}</div>;
+};
