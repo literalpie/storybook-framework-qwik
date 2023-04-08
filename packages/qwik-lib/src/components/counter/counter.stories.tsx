@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "../../../../storybook-framework-qwik/dist";
+import { Meta, StoryObj } from "storybook-framework-qwik";
 import { Lite } from "../lite/lite";
 import { Counter, CounterProps } from "./counter";
 
