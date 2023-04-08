@@ -1,7 +1,8 @@
 import { render as renderQwik } from '@builder.io/qwik';
 import { ArgsStoryFn, RenderContext } from '@storybook/types';
-import { componentToJSX } from './component-to-jsx.js';
 import { QwikRenderer } from './types.js';
+import { componentToJSX } from './component-to-jsx.js';
+export { parameters, argTypesEnhancers } from "./docs/config.js"
 
 // returns the Qwik component as a JSX element (</MyComponent>)
 // If a story has a custom renderer, it will replace this function.
@@ -21,7 +22,6 @@ export async function renderToCanvas<T>(
   await renderQwik(container, storyFn());
   canvasElement.childNodes.forEach((c) => c.remove());
   canvasElement.append(container);
-
   showMain();
 }
 

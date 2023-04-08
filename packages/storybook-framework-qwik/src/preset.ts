@@ -1,13 +1,14 @@
 import type { StorybookViteConfig } from '@storybook/builder-vite';
-import { mergeConfig } from 'vite';
+import { mergeConfig, Plugin } from 'vite';
 import { QWIK_LOADER } from '@builder.io/qwik/loader';
+import { qwikDocgen } from './docs/qwik-docgen.js';
 
 export const core: StorybookViteConfig['core'] = {
   builder: '@storybook/builder-vite',
   renderer: 'storybook-framework-qwik',
 };
 
-export const viteFinal: StorybookViteConfig['viteFinal'] = async (defaultConfig, options) => {
+export const viteFinal: StorybookViteConfig['viteFinal'] = async (defaultConfig) => {
   const config = mergeConfig(defaultConfig, {
     build: {
       target: 'es2020',
@@ -16,11 +17,16 @@ export const viteFinal: StorybookViteConfig['viteFinal'] = async (defaultConfig,
       },
     },
   });
+
+  if (!config.plugins.some((plugin: Plugin) => plugin.name === "storybook:qwik-docgen-plugin"))
+    config.plugins.push(qwikDocgen(defaultConfig.optimizeDeps.entries as Array<string>));
+
   // Qwik-city plugin may be used in apps, but it has mdx stuff that conflicts with Storybook mdx
   // we'll try to only remove the transform code (where the mdx stuff is), and keep everything else.
-  config.plugins = config.plugins.map((plugin: any) =>
+  config.plugins = config.plugins.map((plugin: Plugin) =>
     plugin.name === 'vite-plugin-qwik-city' ? { ...plugin, transform: () => null as any } : plugin
   );
+  
   return config;
 };
 
