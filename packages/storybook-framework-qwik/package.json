@@ -78,7 +78,9 @@
     "watch": "tsc --watch --outDir ./dist --listEmittedFiles",
     "build": "tsc --outDir ./dist --listEmittedFiles",
     "//semantic-release": "this should be a GHA eventually. I only made this work once locally using tokens in env vars",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check ."
   },
   "dependencies": {
     "@storybook/builder-vite": ">=7.0.0-beta.7",
