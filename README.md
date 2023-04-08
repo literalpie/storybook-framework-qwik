@@ -20,11 +20,11 @@ See the [Storybook Docs](https://storybook.js.org/docs/7.0/qwik/get-started/intr
 A basic story will look like this:
 
 ```tsx
-import Header, { HeaderProps } from './header';
-import { StoryObj } from 'storybook-framework-qwik';
+import Header, { HeaderProps } from "./header";
+import { StoryObj } from "storybook-framework-qwik";
 
 export default {
-  title: 'Header',
+  title: "Header",
   component: Header, // component value may be a `component$`, or a "Lite component" (function component)
 } as Meta<HeaderProps>;
 
@@ -34,9 +34,12 @@ export const Default: StoryObj<HeaderProps> = {};
 You can include a custom renderer for each Meta, or for each story. However, the renderer cannot use Qwik features (such as `useStore`). If you need Qwik features in the story, make a wrapper for the component. This is useful when a component expects its props to be reactive state (such as `useStore` or `useSignal`)
 
 ```tsx
-import { ReactiveComponent, ReactiveComponentProps } from './reactive-component';
-import { Meta, StoryObj } from 'storybook-framework-qwik';
-import { component$, useStore } from '@builder.io/qwik';
+import {
+  ReactiveComponent,
+  ReactiveComponentProps,
+} from "./reactive-component";
+import { Meta, StoryObj } from "storybook-framework-qwik";
+import { component$, useStore } from "@builder.io/qwik";
 
 const ReactiveComponentWrapper = component$<ReactiveComponentProps>((args) => {
   const state = useStore(args.state);
@@ -44,7 +47,7 @@ const ReactiveComponentWrapper = component$<ReactiveComponentProps>((args) => {
 });
 
 export default {
-  title: 'Reactive Component',
+  title: "Reactive Component",
   component: ReactiveComponent,
   render: (args) => <ReactiveComponentWrapper state={args.state} />,
   args: { state: { number: 1 } },
@@ -58,9 +61,9 @@ export const Default: StoryObj<ReactiveComponentProps> = {};
 To make a story decorator, create a function that returns JSX, including the StoryFn passed to the decorator as a parameter
 
 ```tsx
-import { JSXNode } from '@builder.io/qwik';
-import { MyComponent } from './my-component';
-import { Decorator } from 'storybook-framework-qwik';
+import { JSXNode } from "@builder.io/qwik";
+import { MyComponent } from "./my-component";
+import { Decorator } from "storybook-framework-qwik";
 
 export const myDecorator: Decorator = (Story) =>
   // Cast is needed because something is out of sync with the JSXNode generated in tsx files and the type expected by Decorator
@@ -72,7 +75,7 @@ export const myDecorator: Decorator = (Story) =>
 If using QwikCity features in your components, you may want to import the qwikCityDecorator, which wraps stories in `MockQwikCityProvider`. This can be added to all stories by exporting the decorator in a decorators array in `.storybook/preview.ts`:
 
 ```ts
-import { qwikCityDecorator } from 'storybook-framework-qwik/qwik-city-decorator';
+import { qwikCityDecorator } from "storybook-framework-qwik/qwik-city-decorator";
 export const decorators = [qwikCityDecorator];
 ```
 
@@ -81,6 +84,7 @@ You can also add the decorator to individual stories or story files.
 Because this framework is shipped only as an ESM module, this may require that you add `"type": "module"` to your `package.json` (or create a package.json inside your .storybook folder to only make this setting apply to storybook).
 
 ## Demo
+
 There is a simple example Storybook using the latest version of this package [here](https://storybook-framework-qwik.vercel.app/)
 
 ## Credit

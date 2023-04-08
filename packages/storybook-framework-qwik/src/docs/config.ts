@@ -1,11 +1,14 @@
-import type { FunctionComponent } from '@builder.io/qwik';
-import type { StrictArgTypes } from '@storybook/types';
-import { enhanceArgTypes, convert } from '@storybook/docs-tools';
-import { ComponentDoc } from 'react-docgen-typescript';
+import type { FunctionComponent } from "@builder.io/qwik";
+import type { StrictArgTypes } from "@storybook/types";
+import { enhanceArgTypes, convert } from "@storybook/docs-tools";
+import { ComponentDoc } from "react-docgen-typescript";
 
 function getComponentName(component: FunctionComponent): string {
-  if (component.name === 'QwikComponent')
-    return component({}, '', 0).props['q:renderFn'].dev.displayName.replace('_component', '');
+  if (component.name === "QwikComponent")
+    return component({}, "", 0).props["q:renderFn"].dev.displayName.replace(
+      "_component",
+      ""
+    );
   return component.name;
 }
 
