@@ -1,7 +1,7 @@
-import { component$, Slot, useStylesScoped$ } from '@builder.io/qwik';
+import { component$, Slot, useStylesScoped$ } from "@builder.io/qwik";
 
 export interface StoryExampleProps {
-  color: 'red' | 'green' | 'blue';
+  color: "red" | "green" | "blue";
 }
 
 export const StoryExample = component$((props: StoryExampleProps) => {

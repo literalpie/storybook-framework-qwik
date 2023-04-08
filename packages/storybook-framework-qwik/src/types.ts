@@ -1,6 +1,6 @@
-import { Component } from '@builder.io/qwik';
-import { WebRenderer } from '@storybook/types';
-export type { Args, ArgTypes, Parameters, StrictArgs } from '@storybook/types';
+import { Component } from "@builder.io/qwik";
+import { WebRenderer } from "@storybook/types";
+export type { Args, ArgTypes, Parameters, StrictArgs } from "@storybook/types";
 import type {
   AnnotatedStoryFn,
   Args,
@@ -11,7 +11,7 @@ import type {
   StoryContext as GenericStoryContext,
   StrictArgs,
   StorybookConfig as StorybookConfigBase,
-} from '@storybook/types';
+} from "@storybook/types";
 
 export interface QwikRenderer<T> extends WebRenderer {
   component: Component<T>;
@@ -23,26 +23,44 @@ export interface QwikRenderer<T> extends WebRenderer {
  *
  * @see [Default export](https://storybook.js.org/docs/formats/component-story-format/#default-export)
  */
-export type Meta<TArgs = Args> = ComponentAnnotations<QwikRenderer<TArgs>, TArgs>;
+export type Meta<TArgs = Args> = ComponentAnnotations<
+  QwikRenderer<TArgs>,
+  TArgs
+>;
 
 /**
  * Story function that represents a CSFv2 component example.
  *
  * @see [Named Story exports](https://storybook.js.org/docs/formats/component-story-format/#named-story-exports)
  */
-export type StoryFn<TArgs = Args> = AnnotatedStoryFn<QwikRenderer<TArgs>, TArgs>;
+export type StoryFn<TArgs = Args> = AnnotatedStoryFn<
+  QwikRenderer<TArgs>,
+  TArgs
+>;
 
 /**
  * Story function that represents a CSFv3 component example.
  *
  * @see [Named Story exports](https://storybook.js.org/docs/formats/component-story-format/#named-story-exports)
  */
-export type StoryObj<TArgs = Args> = StoryAnnotations<QwikRenderer<TArgs>, TArgs>;
+export type StoryObj<TArgs = Args> = StoryAnnotations<
+  QwikRenderer<TArgs>,
+  TArgs
+>;
 
-export type Decorator<TArgs = StrictArgs> = DecoratorFunction<QwikRenderer<TArgs>, TArgs>;
-export type Loader<TArgs = StrictArgs> = LoaderFunction<QwikRenderer<TArgs>, TArgs>;
-export type StoryContext<TArgs = StrictArgs> = GenericStoryContext<QwikRenderer<TArgs>, TArgs>;
+export type Decorator<TArgs = StrictArgs> = DecoratorFunction<
+  QwikRenderer<TArgs>,
+  TArgs
+>;
+export type Loader<TArgs = StrictArgs> = LoaderFunction<
+  QwikRenderer<TArgs>,
+  TArgs
+>;
+export type StoryContext<TArgs = StrictArgs> = GenericStoryContext<
+  QwikRenderer<TArgs>,
+  TArgs
+>;
 
-export type StorybookConfig = Omit<StorybookConfigBase, 'framework'> & {
-  framework: 'storybook-framework-qwik' | { name: 'storybook-framework-qwik' };
+export type StorybookConfig = Omit<StorybookConfigBase, "framework"> & {
+  framework: "storybook-framework-qwik" | { name: "storybook-framework-qwik" };
 };

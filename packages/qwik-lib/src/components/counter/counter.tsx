@@ -1,4 +1,4 @@
-import { component$, useStore } from '@builder.io/qwik';
+import { component$, useStore } from "@builder.io/qwik";
 
 export interface CounterProps {
   /** Counter initial value */

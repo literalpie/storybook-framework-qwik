@@ -1,4 +1,4 @@
-name: 'Vercel Preview and Storybook Test'
+name: "Vercel Preview and Storybook Test"
 on:
   pull_request:
   workflow_dispatch:
@@ -45,4 +45,4 @@ jobs:
         run: |
           yarn workspace qwik-app test-storybook
         env:
-          TARGET_URL: '${{ steps.deploy.outputs.url }}'
+          TARGET_URL: "${{ steps.deploy.outputs.url }}"

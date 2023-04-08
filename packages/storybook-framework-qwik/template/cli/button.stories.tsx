@@ -1,20 +1,20 @@
-import { action } from '@storybook/addon-actions';
-import { $ } from '@builder.io/qwik';
-import { Meta, StoryObj } from 'storybook-framework-qwik';
-import { ButtonProps, Button } from './button';
+import { action } from "@storybook/addon-actions";
+import { $ } from "@builder.io/qwik";
+import { Meta, StoryObj } from "storybook-framework-qwik";
+import { ButtonProps, Button } from "./button";
 
 export default {
-  title: 'Button',
+  title: "Button",
   args: {
     // automatic actions are not yet supported.
     // See https://github.com/literalpie/storybook-framework-qwik/issues/16
     // For now, use the legacy addon-actions API wrapped in a $ to make your own QRL action.
     onClick$: $((event, element) => {
-      action('click action')({ event, element });
+      action("click action")({ event, element });
     }),
   },
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
   render: ({ label, backgroundColor, primary, onClick$, size }) => {
     return (
@@ -37,26 +37,26 @@ type Story = StoryObj<ButtonProps & { label: string }>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: 'Button',
+    label: "Button",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    label: "Button",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
+    size: "large",
+    label: "Button",
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    size: "small",
+    label: "Button",
   },
 };

@@ -1,15 +1,15 @@
-import { Lite as AliasLite } from './lite';
+import { Lite as AliasLite } from "./lite";
 
 export default {
-  title: 'Lite',
+  title: "Lite",
   component: AliasLite,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 /** Test case: Override default value */
 export const Standard = {
   args: {
-    prop: 'Non-default',
+    prop: "Non-default",
   },
 };
 

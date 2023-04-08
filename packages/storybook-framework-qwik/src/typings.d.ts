@@ -1,4 +1,4 @@
-import type { ComponentDoc } from 'react-docgen-typescript';
+import type { ComponentDoc } from "react-docgen-typescript";
 
 declare global {
   interface Window {

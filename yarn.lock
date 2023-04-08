@@ -18756,6 +18756,7 @@ __metadata:
     "@builder.io/qwik": ^0.24.0
     "@builder.io/qwik-city": ^0.7.0
     concurrently: ^7.6.0
+    prettier: ^2.8.7
     undici: 5.21.0
     vercel: ^28.18.1
     wait-on: ^7.0.1
