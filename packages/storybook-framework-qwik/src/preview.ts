@@ -1,14 +1,14 @@
-import { render as renderQwik } from '@builder.io/qwik';
-import { ArgsStoryFn, RenderContext } from '@storybook/types';
-import { QwikRenderer } from './types.js';
-import { componentToJSX } from './component-to-jsx.js';
-export { parameters, argTypesEnhancers } from "./docs/config.js"
+import { render as renderQwik } from "@builder.io/qwik";
+import { ArgsStoryFn, RenderContext } from "@storybook/types";
+import { QwikRenderer } from "./types.js";
+import { componentToJSX } from "./component-to-jsx.js";
+export { parameters, argTypesEnhancers } from "./docs/config.js";
 
 // returns the Qwik component as a JSX element (</MyComponent>)
 // If a story has a custom renderer, it will replace this function.
 export const render: ArgsStoryFn<QwikRenderer<unknown>> = (args, context) => {
   const { component } = context;
-  if (typeof component === 'function') {
+  if (typeof component === "function") {
     return componentToJSX(component, args);
   }
   return component;
@@ -16,9 +16,9 @@ export const render: ArgsStoryFn<QwikRenderer<unknown>> = (args, context) => {
 
 export async function renderToCanvas<T>(
   { storyFn, showMain }: RenderContext<QwikRenderer<T>>,
-  canvasElement: QwikRenderer<T>['canvasElement']
+  canvasElement: QwikRenderer<T>["canvasElement"]
 ) {
-  const container = document.createElement('div');
+  const container = document.createElement("div");
   await renderQwik(container, storyFn());
   canvasElement.childNodes.forEach((c) => c.remove());
   canvasElement.append(container);
@@ -29,7 +29,7 @@ export async function renderToCanvas<T>(
 // Force a reload when vite notifies of an update as a dirty temporary workaround.
 const viteHotMeta: any = (import.meta as any).hot;
 if (viteHotMeta) {
-  viteHotMeta.on('vite:afterUpdate', () => {
+  viteHotMeta.on("vite:afterUpdate", () => {
     document.location.reload();
   });
 }

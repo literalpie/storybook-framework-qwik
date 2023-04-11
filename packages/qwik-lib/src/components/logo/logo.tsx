@@ -1,8 +1,8 @@
-import { component$ } from '@builder.io/qwik';
+import { component$ } from "@builder.io/qwik";
 
 export const Logo = component$(() => {
   return (
-    <logo style={{ 'text-align': 'center' }}>
+    <logo style={{ "text-align": "center" }}>
       <a href="https://qwik.builder.io/">
         <img
           alt="Qwik Logo"

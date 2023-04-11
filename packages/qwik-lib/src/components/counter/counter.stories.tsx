@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from '../../../../storybook-framework-qwik/dist';
-import { Lite } from '../lite/lite';
-import { Counter, CounterProps } from './counter';
+import { Meta, StoryObj } from "../../../../storybook-framework-qwik/dist";
+import { Lite } from "../lite/lite";
+import { Counter, CounterProps } from "./counter";
 
 export default {
-  title: 'Counter',
+  title: "Counter",
   component: Counter,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<CounterProps>;
 
 /** Test case: Should display this documentation */

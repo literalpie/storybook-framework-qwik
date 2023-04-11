@@ -1,16 +1,20 @@
-import type { FunctionComponent } from '@builder.io/qwik';
-import type { StrictArgTypes } from '@storybook/types';
-import { enhanceArgTypes, convert } from '@storybook/docs-tools';
-import { ComponentDoc } from 'react-docgen-typescript';
+import type { FunctionComponent } from "@builder.io/qwik";
+import type { StrictArgTypes } from "@storybook/types";
+import { enhanceArgTypes, convert } from "@storybook/docs-tools";
+import { ComponentDoc } from "react-docgen-typescript";
 
 function getComponentName(component: FunctionComponent): string {
-  if (component.name === "QwikComponent") return component({}, "", 0).props["q:renderFn"].dev.displayName.replace("_component", "");
+  if (component.name === "QwikComponent")
+    return component({}, "", 0).props["q:renderFn"].dev.displayName.replace(
+      "_component",
+      ""
+    );
   return component.name;
 }
 
 function getComponentDoc(component: FunctionComponent): ComponentDoc {
   const displayName = getComponentName(component);
-  return window.__STORYBOOK_COMPONENT_DOC__.get(displayName);
+  return window.__STORYBOOK_COMPONENT_DOC__?.get(displayName);
 }
 
 function extractComponentDescription(component: FunctionComponent): string {
@@ -26,7 +30,7 @@ function extractArgTypes(component: FunctionComponent): StrictArgTypes {
       ...value,
       type: {
         required: value.required,
-        ...convert(value)
+        ...convert(value),
       },
       table: {
         type: {
@@ -35,10 +39,10 @@ function extractArgTypes(component: FunctionComponent): StrictArgTypes {
         },
         defaultValue: {
           summary: value.defaultValue?.value,
-        }
-      }
-    }
-  })
+        },
+      },
+    };
+  });
   return strictArgTypes;
 }
 

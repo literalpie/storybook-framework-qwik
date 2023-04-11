@@ -1,0 +1,3 @@
+# Files Prettier should not format
+node_modules
+dist
