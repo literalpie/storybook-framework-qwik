@@ -10,6 +10,7 @@ import type {
   LoaderFunction,
   StoryContext as GenericStoryContext,
   StrictArgs,
+  ProjectAnnotations,
   StorybookConfig as StorybookConfigBase,
 } from "@storybook/types";
 
@@ -18,6 +19,7 @@ export interface QwikRenderer<T> extends WebRenderer {
   storyResult: ReturnType<Component<T>>;
 }
 
+export type Preview = ProjectAnnotations<QwikRenderer<unknown>>;
 /**
  * Metadata to configure the stories for a component.
  *
