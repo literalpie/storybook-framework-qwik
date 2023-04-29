@@ -1,4 +1,5 @@
 import { render as renderQwik } from "@builder.io/qwik";
+import { renderToString } from "@builder.io/qwik/server";
 import { ArgsStoryFn, RenderContext } from "@storybook/types";
 import { QwikRenderer } from "./types.js";
 import { componentToJSX } from "./component-to-jsx.js";
@@ -19,8 +20,10 @@ export async function renderToCanvas<T>(
   canvasElement: QwikRenderer<T>["canvasElement"]
 ) {
   const container = document.createElement("div");
-  await renderQwik(container, storyFn());
+  // await renderQwik(container, storyFn());
   canvasElement.childNodes.forEach((c) => c.remove());
+  const renderedString = await renderToString(storyFn(), {containerTagName: 'div',debug:true, qwikLoader: {include: 'always'}});
+  container.innerHTML = renderedString.html;
   canvasElement.append(container);
   showMain();
 }

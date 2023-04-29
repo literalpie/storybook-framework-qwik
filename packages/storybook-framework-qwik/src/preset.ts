@@ -44,6 +44,6 @@ export const previewAnnotations: StorybookViteConfig["previewAnnotations"] = (
   entry = []
 ) => [...entry, require.resolve("storybook-framework-qwik/preview.js")];
 
-export const previewHead = (head: string) => {
-  return `${head} <script>${QWIK_LOADER}</script>`;
-};
+// export const previewHead = (head: string) => {
+//   return `${head} <script>${QWIK_LOADER}</script>`;
+// };

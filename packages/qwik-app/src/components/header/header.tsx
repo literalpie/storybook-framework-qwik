@@ -1,4 +1,4 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useSignal, useStylesScoped$ } from "@builder.io/qwik";
 import { QwikLogo } from "../icons/qwik";
 import styles from "./header.css?inline";
 import { useLocation } from "@builder.io/qwik-city";
@@ -7,10 +7,12 @@ export type HeaderProps = { title: string };
 export const Header = component$(({ title }: HeaderProps) => {
   useStylesScoped$(styles);
   const loc = useLocation();
+  const a = useSignal(0);
 
   return (
     <header>
       <div class="logo">
+        <button onClick$={()=>{a.value++}}>{a.value}</button>
         <a
           href="https://qwik.builder.io/"
           aria-label="Qwik Logo"

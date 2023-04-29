@@ -6,9 +6,6 @@ const config: StorybookConfig = {
   framework: {
     name: "storybook-framework-qwik",
   },
-  core: {
-    renderer: "storybook-framework-qwik",
-  },
   docs: {
     autodocs: "tag",
   },
