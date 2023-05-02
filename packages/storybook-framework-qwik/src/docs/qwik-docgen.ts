@@ -2,19 +2,14 @@ import { parse } from "react-docgen-typescript";
 import type { PluginOption } from "vite";
 import MagicString from "magic-string";
 
-export function qwikDocgen(
-  storyFilePaths: Array<string> | undefined
-): PluginOption {
+export function qwikDocgen(): PluginOption {
   return {
     name: "storybook:qwik-docgen-plugin",
     async transform(src, id) {
-      const isComponent =
-        id.endsWith(".tsx") &&
-        !storyFilePaths.some((storyFilePath) => id.endsWith(storyFilePath));
-      if (isComponent) {
+      if (id.endsWith(".tsx")) {
         const componentDocs = parse(id, {
           propFilter: {
-            // Ignore Qwik internal props
+            // Ignore Qwik framework props
             skipPropsWithName: ["key", "q:slot"],
           },
         });
@@ -23,7 +18,7 @@ export function qwikDocgen(
         componentDocs.forEach((componentDoc) =>
           s.append(
             `window.__STORYBOOK_COMPONENT_DOC__.set("${
-              componentDoc.displayName
+              componentDoc.displayName.toLowerCase()
             }", ${JSON.stringify(componentDoc)});`
           )
         );

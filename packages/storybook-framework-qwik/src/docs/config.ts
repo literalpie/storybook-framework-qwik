@@ -1,28 +1,22 @@
-import type { FunctionComponent } from "@builder.io/qwik";
 import type { StrictArgTypes } from "@storybook/types";
 import { enhanceArgTypes, convert } from "@storybook/docs-tools";
 import { ComponentDoc } from "react-docgen-typescript";
 
-function getComponentName(component: FunctionComponent): string {
-  if (component.name === "QwikComponent")
-    return component({}, "", 0).props["q:renderFn"].dev.displayName.replace(
-      "_component",
-      ""
-    );
-  return component.name;
+function getComponentId(): string {
+  return window.__STORYBOOK_PREVIEW__.currentRender.story?.componentId;
 }
 
-function getComponentDoc(component: FunctionComponent): ComponentDoc {
-  const displayName = getComponentName(component);
-  return window.__STORYBOOK_COMPONENT_DOC__?.get(displayName);
+function getComponentDoc(): ComponentDoc {
+  const componentId = getComponentId();
+  return window.__STORYBOOK_COMPONENT_DOC__?.get(componentId);
 }
 
-function extractComponentDescription(component: FunctionComponent): string {
-  return getComponentDoc(component)?.description;
+function extractComponentDescription(): string {
+  return getComponentDoc().description;
 }
 
-function extractArgTypes(component: FunctionComponent): StrictArgTypes {
-  const componentDoc = getComponentDoc(component);
+function extractArgTypes(): StrictArgTypes {
+  const componentDoc = getComponentDoc();
   if (!componentDoc) return undefined;
   const strictArgTypes: StrictArgTypes = {};
   Object.entries(componentDoc.props).forEach(([key, value]) => {

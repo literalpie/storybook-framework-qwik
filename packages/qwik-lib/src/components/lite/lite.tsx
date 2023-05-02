@@ -1,4 +1,5 @@
 export interface LiteProps {
+  /** Prop documentation */
   prop: string;
 }
 
