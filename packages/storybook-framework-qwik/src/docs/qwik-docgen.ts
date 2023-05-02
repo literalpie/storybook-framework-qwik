@@ -17,9 +17,9 @@ export function qwikDocgen(): PluginOption {
         s.append(`window.__STORYBOOK_COMPONENT_DOC__ ??= new Map();`);
         componentDocs.forEach((componentDoc) =>
           s.append(
-            `window.__STORYBOOK_COMPONENT_DOC__.set("${
-              componentDoc.displayName.toLowerCase()
-            }", ${JSON.stringify(componentDoc)});`
+            `window.__STORYBOOK_COMPONENT_DOC__.set("${componentDoc.displayName.toLowerCase()}", ${JSON.stringify(
+              componentDoc
+            )});`
           )
         );
         return {
