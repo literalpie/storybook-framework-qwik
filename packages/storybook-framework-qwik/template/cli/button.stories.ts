@@ -1,37 +1,28 @@
 import { action } from "@storybook/addon-actions";
 import { $ } from "@builder.io/qwik";
-import { Meta, StoryObj } from "storybook-framework-qwik";
-import { ButtonProps, Button } from "./button";
+import type { Meta, StoryObj } from "storybook-framework-qwik";
+import type { ButtonProps, onClickEvent } from "./button";
+import { Button } from "./button";
 
-export default {
+const meta = {
   title: "Button",
   args: {
     // automatic actions are not yet supported.
     // See https://github.com/literalpie/storybook-framework-qwik/issues/16
     // For now, use the legacy addon-actions API wrapped in a $ to make your own QRL action.
-    onClick$: $((event, element) => {
+    onClick$: $<onClickEvent>((event, element) => {
       action("click action")({ event, element });
     }),
   },
   argTypes: {
     backgroundColor: { control: "color" },
   },
-  render: ({ label, backgroundColor, primary, onClick$, size }) => {
-    return (
-      <Button
-        backgroundColor={backgroundColor}
-        primary={primary}
-        onClick$={(args, element) => onClick$?.(args, element)}
-        size={size}
-      >
-        {label}
-      </Button>
-    );
-  },
   component: Button,
-} as Meta<ButtonProps & { label: string }>;
+} satisfies Meta<ButtonProps>;
 
-type Story = StoryObj<ButtonProps & { label: string }>;
+export default meta;
+
+type Story = StoryObj<ButtonProps>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Primary: Story = {
