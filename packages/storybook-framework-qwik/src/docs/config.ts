@@ -12,7 +12,7 @@ function getComponentDoc(): ComponentDoc {
 }
 
 function extractComponentDescription(): string {
-  return getComponentDoc().description;
+  return getComponentDoc()?.description;
 }
 
 function extractArgTypes(): StrictArgTypes {
