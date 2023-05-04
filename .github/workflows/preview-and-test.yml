@@ -8,6 +8,8 @@ env:
 jobs:
   preview:
     name: Preview and Test
+    env:
+      vercel_token: ${{ secrets.VERCEL_TOKEN }}
     runs-on: ubuntu-latest
     environment:
       name: Storybook Preview
@@ -32,16 +34,20 @@ jobs:
         run: |
           yarn lint-all
 
+      # These steps don't work unless a repository owner opened the PR
       - name: Deploy
+        if: ${{ env.vercel_token != '' }}
         run: |
           yarn vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
           yarn vercel build --token=${{ secrets.VERCEL_TOKEN }}
           yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
 
       - id: deploy
+        if: ${{ env.vercel_token != '' }}
         run: echo "url=$(yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> "$GITHUB_OUTPUT"
 
       - name: Storybook Test
+        if: ${{ env.vercel_token != '' }}
         run: |
           yarn workspace qwik-app test-storybook
         env:
