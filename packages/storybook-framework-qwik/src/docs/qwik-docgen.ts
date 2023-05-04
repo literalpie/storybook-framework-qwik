@@ -2,19 +2,21 @@ import { parse } from "react-docgen-typescript";
 import type { PluginOption } from "vite";
 import MagicString from "magic-string";
 
-export function qwikDocgen(
-  storyFilePaths: Array<string> | undefined
-): PluginOption {
+function toKebabCase(value: string) {
+  return value
+    .replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/[\s_]+/g, "-")
+    .toLowerCase();
+}
+
+export function qwikDocgen(): PluginOption {
   return {
     name: "storybook:qwik-docgen-plugin",
     async transform(src, id) {
-      const isComponent =
-        id.endsWith(".tsx") &&
-        !storyFilePaths.some((storyFilePath) => id.endsWith(storyFilePath));
-      if (isComponent) {
+      if (id.endsWith(".tsx")) {
         const componentDocs = parse(id, {
           propFilter: {
-            // Ignore Qwik internal props
+            // Ignore Qwik framework props
             skipPropsWithName: ["key", "q:slot"],
           },
         });
@@ -22,9 +24,9 @@ export function qwikDocgen(
         s.append(`window.__STORYBOOK_COMPONENT_DOC__ ??= new Map();`);
         componentDocs.forEach((componentDoc) =>
           s.append(
-            `window.__STORYBOOK_COMPONENT_DOC__.set("${
+            `window.__STORYBOOK_COMPONENT_DOC__.set("${toKebabCase(
               componentDoc.displayName
-            }", ${JSON.stringify(componentDoc)});`
+            )}", ${JSON.stringify(componentDoc)});`
           )
         );
         return {
