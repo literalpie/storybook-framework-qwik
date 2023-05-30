@@ -1,6 +1,6 @@
 import {
   component$,
-  useClientEffect$,
+  useVisibleTask$,
   useStore,
   useStylesScoped$,
 } from "@builder.io/qwik";
@@ -16,7 +16,7 @@ export default component$(() => {
     number: 20,
   });
 
-  useClientEffect$(({ cleanup }) => {
+  useVisibleTask$(({ cleanup }) => {
     const timeout = setTimeout(() => (state.count = 1), 500);
     cleanup(() => clearTimeout(timeout));
 
