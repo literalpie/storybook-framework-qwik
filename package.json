@@ -28,14 +28,14 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^7.6.0",
-    "prettier": "^2.8.7",
-    "vercel": "^28.18.1",
+    "prettier": "^2.8.8",
+    "vercel": "^28.20.0",
     "wait-on": "^7.0.1"
   },
   "dependencies": {
-    "@builder.io/qwik": "^0.24.0",
-    "@builder.io/qwik-city": "^0.7.0",
-    "undici": "5.21.0"
+    "@builder.io/qwik": "^1.1.4",
+    "@builder.io/qwik-city": "^1.1.4",
+    "undici": "5.22.1"
   },
   "packageManager": "yarn@3.4.1"
 }
