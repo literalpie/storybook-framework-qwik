@@ -1,4 +1,5 @@
 import { Component } from "@builder.io/qwik";
+import { StorybookConfigVite } from "@storybook/builder-vite";
 import { WebRenderer } from "@storybook/types";
 export type { Args, ArgTypes, Parameters, StrictArgs } from "@storybook/types";
 import type {
@@ -65,4 +66,4 @@ export type StoryContext<TArgs = StrictArgs> = GenericStoryContext<
 
 export type StorybookConfig = Omit<StorybookConfigBase, "framework"> & {
   framework: "storybook-framework-qwik" | { name: "storybook-framework-qwik" };
-};
+} & StorybookConfigVite;
