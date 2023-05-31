@@ -4,7 +4,8 @@ import { qwikDocgen } from "./docs/qwik-docgen.js";
 import { StorybookConfig } from "./types.js";
 import { dirname, join } from "path";
 
-const wrapForPnP = (input: string) => dirname(require.resolve(join(input, 'package.json')));
+const wrapForPnP = (input: string) =>
+  dirname(require.resolve(join(input, "package.json")));
 
 export const core: StorybookConfig["core"] = {
   builder: wrapForPnP("@storybook/builder-vite"),
