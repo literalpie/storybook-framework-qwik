@@ -1,14 +1,18 @@
-import type { StorybookViteConfig } from "@storybook/builder-vite";
 import { mergeConfig, Plugin } from "vite";
 import { QWIK_LOADER } from "@builder.io/qwik/loader";
 import { qwikDocgen } from "./docs/qwik-docgen.js";
+import { StorybookConfig } from "./types.js";
+import { dirname, join } from "path";
 
-export const core: StorybookViteConfig["core"] = {
-  builder: "@storybook/builder-vite",
-  renderer: "storybook-framework-qwik",
+const wrapForPnP = (input: string) =>
+  dirname(require.resolve(join(input, "package.json")));
+
+export const core: StorybookConfig["core"] = {
+  builder: wrapForPnP("@storybook/builder-vite"),
+  renderer: wrapForPnP("storybook-framework-qwik"),
 };
 
-export const viteFinal: StorybookViteConfig["viteFinal"] = async (
+export const viteFinal: StorybookConfig["viteFinal"] = async (
   defaultConfig
 ) => {
   const config = mergeConfig(defaultConfig, {
@@ -38,7 +42,7 @@ export const viteFinal: StorybookViteConfig["viteFinal"] = async (
   return config;
 };
 
-export const previewAnnotations: StorybookViteConfig["previewAnnotations"] = (
+export const previewAnnotations: StorybookConfig["previewAnnotations"] = (
   entry = []
 ) => [...entry, require.resolve("storybook-framework-qwik/preview.js")];
 
