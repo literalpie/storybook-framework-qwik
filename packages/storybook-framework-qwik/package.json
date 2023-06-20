@@ -1,6 +1,6 @@
 {
   "name": "storybook-framework-qwik",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Storybook for Qwik: View Qwik components in isolation.",
   "keywords": [
     "storybook",
@@ -83,9 +83,9 @@
     "fmt.check": "prettier --check ."
   },
   "dependencies": {
-    "@storybook/builder-vite": ">=7.0.0-beta.7",
-    "@storybook/docs-tools": ">=7.0.0-beta.7",
-    "@storybook/types": ">=7.0.0-beta.7",
+    "@storybook/builder-vite": ">=7.0.0",
+    "@storybook/docs-tools": ">=7.0.0",
+    "@storybook/types": ">=7.0.0",
     "magic-string": "^0.30.0",
     "react-docgen-typescript": "^2.2.2"
   },
@@ -93,14 +93,14 @@
     "@builder.io/qwik": ">=0.15.2"
   },
   "optionalDependencies": {
-    "@builder.io/qwik-city": ">=0.0.128"
+    "@builder.io/qwik-city": "^1.1.4"
   },
   "devDependencies": {
     "@suin/semantic-release-yarn": "1.1.0",
-    "@types/node": "^18",
-    "semantic-release": "^21.0.0",
-    "typescript": "~5.0.2",
-    "vite": "^4.2.1"
+    "@types/node": "^18.16.16",
+    "semantic-release": "^21.0.2",
+    "typescript": "~5.0.4",
+    "vite": "^4.3.9"
   },
   "engines": {
     "node": "^14.18 || >=16"
