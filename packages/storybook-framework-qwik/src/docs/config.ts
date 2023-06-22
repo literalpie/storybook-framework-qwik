@@ -3,7 +3,7 @@ import { enhanceArgTypes, convert } from "@storybook/docs-tools";
 import { ComponentDoc } from "react-docgen-typescript";
 
 function getComponentId(): string {
-  return window.__STORYBOOK_PREVIEW__.currentRender.story?.componentId;
+  return window.__STORYBOOK_PREVIEW__?.currentRender?.story?.componentId;
 }
 
 function getComponentDoc(): ComponentDoc {
