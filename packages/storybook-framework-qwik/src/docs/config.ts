@@ -1,4 +1,4 @@
-import type { StrictArgTypes } from "@storybook/types";
+import type { ArgTypesEnhancer, StrictArgTypes } from "@storybook/types";
 import { enhanceArgTypes, convert } from "@storybook/docs-tools";
 import { ComponentDoc } from "react-docgen-typescript";
 
@@ -48,4 +48,4 @@ export const parameters = {
   },
 };
 
-export const argTypesEnhancers = [enhanceArgTypes];
+export const argTypesEnhancers: ArgTypesEnhancer[] = [enhanceArgTypes];
