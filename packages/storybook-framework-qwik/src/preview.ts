@@ -19,9 +19,9 @@ export async function renderToCanvas<T>(
   canvasElement: QwikRenderer<T>["canvasElement"]
 ) {
   const container = document.createElement("div");
-  await renderQwik(container, storyFn());
   canvasElement.childNodes.forEach((c) => c.remove());
   canvasElement.append(container);
+  await renderQwik(container, storyFn());
   showMain();
 }
 
