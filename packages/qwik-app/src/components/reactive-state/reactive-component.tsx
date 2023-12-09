@@ -13,5 +13,5 @@ export const ReactiveComponent = component$(
         </button>
       </div>
     );
-  }
+  },
 );

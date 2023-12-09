@@ -25,9 +25,9 @@ export function qwikDocgen(): PluginOption {
         componentDocs.forEach((componentDoc) =>
           s.append(
             `window.__STORYBOOK_COMPONENT_DOC__.set("${toKebabCase(
-              componentDoc.displayName
-            )}", ${JSON.stringify(componentDoc)});`
-          )
+              componentDoc.displayName,
+            )}", ${JSON.stringify(componentDoc)});`,
+          ),
         );
         return {
           code: s.toString(),

@@ -16,7 +16,7 @@ export const render: ArgsStoryFn<QwikRenderer<unknown>> = (args, context) => {
 
 export async function renderToCanvas<T>(
   { storyFn, showMain }: RenderContext<QwikRenderer<T>>,
-  canvasElement: QwikRenderer<T>["canvasElement"]
+  canvasElement: QwikRenderer<T>["canvasElement"],
 ) {
   const container = document.createElement("div");
   canvasElement.childNodes.forEach((c) => c.remove());
