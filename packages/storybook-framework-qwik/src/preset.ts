@@ -13,7 +13,7 @@ export const core: StorybookConfig["core"] = {
 };
 
 export const viteFinal: StorybookConfig["viteFinal"] = async (
-  defaultConfig
+  defaultConfig,
 ) => {
   const config = mergeConfig(defaultConfig, {
     build: {
@@ -26,7 +26,7 @@ export const viteFinal: StorybookConfig["viteFinal"] = async (
 
   if (
     !config.plugins.some(
-      (plugin: Plugin) => plugin.name === "storybook:qwik-docgen-plugin"
+      (plugin: Plugin) => plugin.name === "storybook:qwik-docgen-plugin",
     )
   )
     config.plugins.push(qwikDocgen());
@@ -51,7 +51,7 @@ export const viteFinal: StorybookConfig["viteFinal"] = async (
 };
 
 export const previewAnnotations: StorybookConfig["previewAnnotations"] = (
-  entry = []
+  entry = [],
 ) => [...entry, require.resolve("storybook-framework-qwik/preview.js")];
 
 export const previewHead = (head: string) => {

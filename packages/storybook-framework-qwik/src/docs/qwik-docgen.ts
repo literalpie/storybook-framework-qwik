@@ -20,14 +20,14 @@ export function qwikDocgen(): PluginOption {
             skipPropsWithName: ["key", "q:slot"],
           },
         });
-        const s = new MagicString.default(src);
+        const s = new MagicString(src);
         s.append(`window.__STORYBOOK_COMPONENT_DOC__ ??= new Map();`);
         componentDocs.forEach((componentDoc) =>
           s.append(
             `window.__STORYBOOK_COMPONENT_DOC__.set("${toKebabCase(
-              componentDoc.displayName
-            )}", ${JSON.stringify(componentDoc)});`
-          )
+              componentDoc.displayName,
+            )}", ${JSON.stringify(componentDoc)});`,
+          ),
         );
         return {
           code: s.toString(),
