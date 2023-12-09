@@ -33,8 +33,8 @@
     "wait-on": "^7.0.1"
   },
   "dependencies": {
-    "@builder.io/qwik": "^1.1.4",
-    "@builder.io/qwik-city": "^1.1.4",
+    "@builder.io/qwik": "^1.3.0",
+    "@builder.io/qwik-city": "^1.3.0",
     "undici": "5.22.1"
   },
   "packageManager": "yarn@3.4.1"
