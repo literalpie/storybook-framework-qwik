@@ -16,6 +16,7 @@ export default component$(() => {
     number: 20,
   });
 
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(({ cleanup }) => {
     const timeout = setTimeout(() => (state.count = 1), 500);
     cleanup(() => clearTimeout(timeout));
@@ -40,7 +41,7 @@ export default component$(() => {
         }}
         class={{
           host: true,
-          pride: loc.query["pride"] === "true",
+          pride: (loc as any).query["pride"] === "true",
         }}
       >
         {Array.from({ length: state.number }, (_, i) => (
