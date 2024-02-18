@@ -49,6 +49,6 @@ jobs:
       - name: Storybook Test
         if: ${{ env.vercel_token != '' }}
         run: |
-          yarn workspace qwik-app test-storybook
+          yarn workspace qwik-app playwright install && yarn workspace qwik-app test-storybook
         env:
           TARGET_URL: "${{ steps.deploy.outputs.url }}"

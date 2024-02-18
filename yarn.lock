@@ -16095,7 +16095,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.14.0":
+"playwright@npm:1.41.2, playwright@npm:^1.14.0":
   version: 1.41.2
   resolution: "playwright@npm:1.41.2"
   dependencies:
@@ -16472,6 +16472,7 @@ __metadata:
     eslint: 8.56.0
     eslint-plugin-qwik: 1.4.1
     node-fetch: 3.3.2
+    playwright: 1.41.2
     prettier: 3.2.5
     react: 18.2.0
     react-dom: 18.2.0
