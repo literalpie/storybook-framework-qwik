@@ -1,3 +1,8 @@
+# 0.3.0
+
+- Support storybook actions
+- Fix issue that caused template to fail to build (because it tried to import @storybook/addon-actions without installing it)
+
 # 0.2.5
 
 - Fix issue that caused useVisibleTask$ to not run
