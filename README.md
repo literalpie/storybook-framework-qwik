@@ -83,6 +83,14 @@ You can also add the decorator to individual stories or story files.
 
 Because this framework is shipped only as an ESM module, this may require that you add `"type": "module"` to your `package.json` (or create a package.json inside your .storybook folder to only make this setting apply to storybook).
 
+## Troubleshooting
+
+If you are using `MDX` files and get an error like:
+
+`Failed to resolve import "react/jsx-dev-runtime" `
+
+you may need to install `react` as a dev dependency.
+
 ## Demo
 
 There is a simple example Storybook using the latest version of this package [here](https://storybook-framework-qwik.vercel.app/)
