@@ -1,3 +1,7 @@
+# 0.4.0
+
+- Storybook 8 support
+
 # 0.3.0
 
 - Support storybook actions
