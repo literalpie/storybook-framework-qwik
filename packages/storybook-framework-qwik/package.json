@@ -89,10 +89,10 @@
     "react-docgen-typescript": "^2.2.2"
   },
   "peerDependencies": {
-    "@builder.io/qwik": ">=0.15.2"
+    "@builder.io/qwik": ">=1.0.0"
   },
   "optionalDependencies": {
-    "@builder.io/qwik-city": ">=1.4.1"
+    "@builder.io/qwik-city": ">=1.0.0"
   },
   "devDependencies": {
     "@storybook/types": "^8.4.1",
