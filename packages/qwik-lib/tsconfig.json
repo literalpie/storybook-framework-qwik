@@ -18,6 +18,6 @@
     "noEmit": true,
     "types": ["vite/client"]
   },
-  "include": ["src"],
+  "include": ["src", "vite.config.mts"],
   "files": ["./.eslintrc.cjs"]
 }

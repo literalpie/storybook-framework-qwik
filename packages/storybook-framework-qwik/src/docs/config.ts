@@ -29,7 +29,7 @@ function extractArgTypes(): StrictArgTypes {
       table: {
         type: {
           summary: value.type.name,
-          required: value.required,
+          // required: value.required,
         },
         defaultValue: {
           summary: value.defaultValue?.value,
