@@ -5,6 +5,6 @@ export default {
   title: "Light Component",
   component: LightComponent,
   tags: ["autodocs"],
-} as Meta<{}>;
+} as Meta<unknown>;
 
-export const Default: StoryObj<{}> = {};
+export const Default: StoryObj<unknown> = {};

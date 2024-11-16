@@ -4,7 +4,7 @@ import {
 } from "./reactive-component";
 import { Meta, StoryObj } from "../../../../storybook-framework-qwik/dist";
 import { component$, useStore } from "@builder.io/qwik";
-import { within, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/test";
 
 const ReactiveComponentWrapper = component$<ReactiveComponentProps>((args) => {
   const state = useStore(args.state);

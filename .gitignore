@@ -12,3 +12,5 @@ pnp.*
 **/storybook-static
 storybook-static
 .vercel
+
+.tokens.txt
