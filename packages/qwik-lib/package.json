@@ -36,8 +36,8 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@builder.io/qwik": "1.4.1",
-    "@builder.io/qwik-city": "1.4.1",
+    "@builder.io/qwik": "1.10.0",
+    "@builder.io/qwik-city": "1.10.0",
     "@storybook/addon-essentials": "8.4.1",
     "@storybook/addon-interactions": "8.4.1",
     "@storybook/addon-links": "8.4.1",
