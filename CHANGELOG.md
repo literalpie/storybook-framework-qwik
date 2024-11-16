@@ -1,5 +1,10 @@
 # 0.4.0
 
+- Update dependencies
+- Template now uses @storybook/test instead of @storybook/testing-library
+
+# 0.4.0
+
 - Storybook 8 support
 
 # 0.3.0
