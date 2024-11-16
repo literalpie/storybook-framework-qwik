@@ -42,7 +42,7 @@
     "@storybook/addon-interactions": "8.4.1",
     "@storybook/addon-links": "8.4.1",
     "@storybook/blocks": "8.4.1",
-    "@storybook/testing-library": "^0.2.2",
+    "@storybook/test": "8.4.1",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.8.7",
     "@types/node-fetch": "^2.6.11",
