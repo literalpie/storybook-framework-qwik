@@ -46,20 +46,20 @@
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.13.10",
     "@types/node-fetch": "^2.6.12",
-    "@typescript-eslint/eslint-plugin": "^8.12.2",
-    "@typescript-eslint/parser": "^8.12.2",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
     "eslint": "^8.57.1",
-    "eslint-plugin-qwik": "1.9.1",
-    "eslint-plugin-storybook": "^0.10.2",
+    "eslint-plugin-qwik": "1.12.1",
+    "eslint-plugin-storybook": "^0.11.4",
     "node-fetch": "^3.3.2",
-    "np": "^10.0.7",
-    "prettier": "^3.3.3",
+    "np": "^10.2.0",
+    "prettier": "^3.5.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "storybook": "8.6.6",
     "storybook-framework-qwik": "workspace:*",
-    "typescript": "^5.6.3",
+    "typescript": "^5.8.2",
     "undici": "^6.20.1",
-    "vite": "^5.4.10"
+    "vite": "^5.4.14"
   }
 }

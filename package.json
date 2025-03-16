@@ -27,10 +27,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^9.0.1",
-    "prettier": "^3.3.3",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.3",
     "vercel": "^37.14.0",
-    "wait-on": "^8.0.1"
+    "wait-on": "^8.0.3"
   },
   "dependencies": {
     "@builder.io/qwik": "1.12.1",

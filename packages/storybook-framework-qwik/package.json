@@ -85,7 +85,7 @@
   "dependencies": {
     "@storybook/builder-vite": "^8.6.6",
     "@storybook/docs-tools": "^8.6.6",
-    "magic-string": "^0.30.7",
+    "magic-string": "^0.30.17",
     "react-docgen-typescript": "^2.2.2"
   },
   "peerDependencies": {
@@ -98,9 +98,9 @@
     "@storybook/types": "^8.6.6",
     "@suin/semantic-release-yarn": "1.1.0",
     "@types/node": "^22.13.10",
-    "semantic-release": "^24.2.0",
-    "typescript": "~5.6.3",
-    "vite": "^5.4.10"
+    "semantic-release": "^24.2.3",
+    "typescript": "~5.8.2",
+    "vite": "^5.4.14"
   },
   "engines": {
     "node": "^14.18 || >=16"
