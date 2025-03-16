@@ -29,13 +29,13 @@
   "devDependencies": {
     "concurrently": "^9.1.2",
     "prettier": "^3.5.3",
-    "vercel": "^37.14.0",
+    "vercel": "^41.4.1",
     "wait-on": "^8.0.3"
   },
   "dependencies": {
     "@builder.io/qwik": "1.12.1",
     "@builder.io/qwik-city": "1.12.1",
-    "undici": "6.20.1"
+    "undici": "7.5.0"
   },
   "packageManager": "yarn@3.4.1"
 }
