@@ -438,9 +438,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@builder.io/qwik-city@npm:1.10.0, @builder.io/qwik-city@npm:>=1.0.0":
-  version: 1.10.0
-  resolution: "@builder.io/qwik-city@npm:1.10.0"
+"@builder.io/qwik-city@npm:1.12.1, @builder.io/qwik-city@npm:>=1.0.0":
+  version: 1.12.1
+  resolution: "@builder.io/qwik-city@npm:1.12.1"
   dependencies:
     "@mdx-js/mdx": ^3
     "@types/mdx": ^2
@@ -454,20 +454,20 @@ __metadata:
     zod: 3.22.4
   peerDependencies:
     vite: ^5
-  checksum: d66bec3904efd761a11e01a62ae213761fc38fc322b9fd3509330393014699446f0cabcc74554784299b6511353a11bd6f6aaaf8457ca9cb40f333f967d05d6b
+  checksum: 4fe1afc9735cac9ecec036c4a07cf3e2ade10b2d866b89fc712400cd82cbaecd9f26bdda1895d0391c45dcf9555b465395111be81b022a417ae4600edbda4683
   languageName: node
   linkType: hard
 
-"@builder.io/qwik@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@builder.io/qwik@npm:1.10.0"
+"@builder.io/qwik@npm:1.12.1":
+  version: 1.12.1
+  resolution: "@builder.io/qwik@npm:1.12.1"
   dependencies:
     csstype: ^3.1
   peerDependencies:
     vite: ^5
   bin:
     qwik: qwik-cli.cjs
-  checksum: 460143fb10157327a3e83c65544665d0b478c0a41b2bc7df30a5aa5757b02931505582dcb37c3d8dacade5641e3dad365dae12b36bb1c0a86dff66a190808b7b
+  checksum: 957cf0e52ec3244ca2253113fe4a9c9ba45a5746a1905bed5e7f52bfaf1492470b5cada3418dbffb7805d1a574f4ead7f50ea04eebbddd6d2fa18795bbc8f36d
   languageName: node
   linkType: hard
 
@@ -13579,8 +13579,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "qwik-app@workspace:packages/qwik-app"
   dependencies:
-    "@builder.io/qwik": 1.10.0
-    "@builder.io/qwik-city": 1.10.0
+    "@builder.io/qwik": 1.12.1
+    "@builder.io/qwik-city": 1.12.1
     "@storybook/addon-a11y": 8.4.1
     "@storybook/addon-essentials": 8.4.1
     "@storybook/addon-interactions": 8.4.1
@@ -13611,8 +13611,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "qwik-lib@workspace:packages/qwik-lib"
   dependencies:
-    "@builder.io/qwik": 1.10.0
-    "@builder.io/qwik-city": 1.10.0
+    "@builder.io/qwik": 1.12.1
+    "@builder.io/qwik-city": 1.12.1
     "@storybook/addon-essentials": 8.4.1
     "@storybook/addon-interactions": 8.4.1
     "@storybook/addon-links": 8.4.1
@@ -14943,8 +14943,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "storybook-framework-qwik-repo@workspace:."
   dependencies:
-    "@builder.io/qwik": 1.10.0
-    "@builder.io/qwik-city": 1.10.0
+    "@builder.io/qwik": 1.12.1
+    "@builder.io/qwik-city": 1.12.1
     concurrently: ^9.0.1
     prettier: ^3.3.3
     undici: 6.20.1
