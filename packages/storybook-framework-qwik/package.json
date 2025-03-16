@@ -83,8 +83,8 @@
     "fmt.check": "prettier --check ."
   },
   "dependencies": {
-    "@storybook/builder-vite": "^7.6.16 || ^8.0.0",
-    "@storybook/docs-tools": "^7.6.16 || ^8.0.0",
+    "@storybook/builder-vite": "^8.6.6",
+    "@storybook/docs-tools": "^8.6.6",
     "magic-string": "^0.30.7",
     "react-docgen-typescript": "^2.2.2"
   },
@@ -95,9 +95,9 @@
     "@builder.io/qwik-city": ">=1.0.0"
   },
   "devDependencies": {
-    "@storybook/types": "^8.4.1",
+    "@storybook/types": "^8.6.6",
     "@suin/semantic-release-yarn": "1.1.0",
-    "@types/node": "^22.8.7",
+    "@types/node": "^22.13.10",
     "semantic-release": "^24.2.0",
     "typescript": "~5.6.3",
     "vite": "^5.4.10"
