@@ -1,4 +1,8 @@
-# 0.4.0
+# 0.4.2
+
+- Resolve CommonJS/ESM Compatibility issue
+
+# 0.4.1
 
 - Update dependencies
 - Template now uses @storybook/test instead of @storybook/testing-library
