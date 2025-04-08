@@ -1,4 +1,4 @@
-# Storybook for framework
+# Storybook for Qwik
 
 ---
 
