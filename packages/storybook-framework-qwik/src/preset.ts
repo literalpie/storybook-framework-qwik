@@ -6,12 +6,9 @@ import { dirname, join } from "path";
 import { createRequire } from "module";
 import { fileURLToPath } from "url";
 
-const require = createRequire(import.meta.url);
-const wrapForPnP = (input: string) => input;
-
 export const core: StorybookConfig["core"] = {
-  builder: wrapForPnP("@storybook/builder-vite"),
-  renderer: wrapForPnP("storybook-framework-qwik"),
+  builder: "@storybook/builder-vite",
+  renderer: "storybook-framework-qwik",
 };
 
 export const viteFinal: StorybookConfig["viteFinal"] = async (
