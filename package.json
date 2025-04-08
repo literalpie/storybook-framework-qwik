@@ -15,7 +15,7 @@
     "watch": "yarn workspace storybook-framework-qwik watch",
     "build": "yarn workspace storybook-framework-qwik build",
     "lint-all": "yarn workspaces foreach run fmt.check && yarn workspaces foreach run lint",
-    "storybook": "yarn workspace qwik-app storybook",
+    "storybook": "yarn workspace qwik-lib storybook",
     "fmt-all": "yarn workspaces foreach run fmt",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
