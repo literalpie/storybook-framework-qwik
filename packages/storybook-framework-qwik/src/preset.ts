@@ -51,7 +51,7 @@ export const viteFinal: StorybookConfig["viteFinal"] = async (
 
 export const previewAnnotations: StorybookConfig["previewAnnotations"] = (
   entry = [],
-) => [...entry, join(dirname(fileURLToPath(import.meta.url)), "preview.js")];
+) => [...entry, join(dirname(fileURLToPath(import.meta.url)), "../preview.js")];
 
 export const previewHead = (head: string) => {
   return `${head} <script>${QWIK_LOADER}</script>`;
