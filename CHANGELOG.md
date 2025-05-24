@@ -1,6 +1,6 @@
 # 0.4.2
 
-- Resolve CommonJS/ESM Compatibility issue
+- Resolve CommonJS/ESM Compatibility issue.
 
 # 0.4.1
 
