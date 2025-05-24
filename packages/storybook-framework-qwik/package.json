@@ -1,6 +1,6 @@
 {
   "name": "storybook-framework-qwik",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Storybook for Qwik: View Qwik components in isolation.",
   "keywords": [
     "storybook",
