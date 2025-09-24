@@ -11,7 +11,6 @@ const wrapForPnP = (input: string) =>
 
 export const core: StorybookConfig["core"] = {
   builder: wrapForPnP("@storybook/builder-vite"),
-  renderer: wrapForPnP("storybook-framework-qwik"),
 };
 
 export const viteFinal: StorybookConfig["viteFinal"] = async (

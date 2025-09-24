@@ -1,3 +1,8 @@
+# 0.5.0
+
+- Storybook 9 support
+- Minimum NodeJS version support >= 20.0.0
+
 # 0.4.3
 
 - Resolve CommonJS/ESM Compatibility issue.

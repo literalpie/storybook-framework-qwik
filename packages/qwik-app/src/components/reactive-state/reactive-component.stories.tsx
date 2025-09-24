@@ -3,11 +3,12 @@ import {
   ReactiveComponentProps,
 } from "./reactive-component";
 import { Meta, StoryObj } from "../../../../storybook-framework-qwik/dist";
-import { component$, useStore } from "@builder.io/qwik";
-import { within, userEvent } from "@storybook/test";
+import { component$, useSignal } from "@builder.io/qwik";
+import { within, userEvent } from "storybook/test";
 
 const ReactiveComponentWrapper = component$<ReactiveComponentProps>((args) => {
-  const state = useStore(args.state);
+  const state = useSignal(args.state.value);
+  
   return <ReactiveComponent state={state} />;
 });
 
@@ -15,12 +16,12 @@ export default {
   title: "Reactive Component",
   component: ReactiveComponent,
   render: (args) => <ReactiveComponentWrapper state={args.state} />,
-  args: { state: { number: 1 } },
+  args: { state: { value: 1 } },
 } as Meta<ReactiveComponentProps>;
 
 export const Default: StoryObj<ReactiveComponentProps> = {};
 export const Args: StoryObj<ReactiveComponentProps> = {
-  args: { state: { number: 7 } },
+  args: { state: { value: 7 } },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await canvas.findByText("7");

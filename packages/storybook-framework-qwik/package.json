@@ -83,19 +83,17 @@
     "fmt.check": "prettier --check ."
   },
   "dependencies": {
-    "@storybook/builder-vite": "^7.6.16 || ^8.0.0",
-    "@storybook/docs-tools": "^7.6.16 || ^8.0.0",
+    "@storybook/builder-vite": "^9.0.0",
     "magic-string": "^0.30.7",
     "react-docgen-typescript": "^2.2.2"
   },
   "peerDependencies": {
-    "@builder.io/qwik": ">=0.15.2"
+    "@builder.io/qwik": ">=0.16.1"
   },
   "optionalDependencies": {
-    "@builder.io/qwik-city": ">=1.4.1"
+    "@builder.io/qwik-city": ">=1.16.1"
   },
   "devDependencies": {
-    "@storybook/types": "^8.4.1",
     "@suin/semantic-release-yarn": "1.1.0",
     "@types/node": "^22.8.7",
     "semantic-release": "^24.2.0",
@@ -103,7 +101,7 @@
     "vite": "^5.4.10"
   },
   "engines": {
-    "node": "^14.18 || >=16"
+    "node": ">=20.0.0"
   },
   "publishConfig": {
     "access": "public"
