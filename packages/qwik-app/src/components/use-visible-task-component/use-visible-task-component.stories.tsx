@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "../../../../storybook-framework-qwik/dist";
-import { within } from "@storybook/test";
+import { within } from "storybook/test";
 import { UseVisibleTaskComponent } from "./use-visible-task-component";
 
 export default {

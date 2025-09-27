@@ -20,7 +20,7 @@ export const Header = component$(({ title }: HeaderProps) => {
         </a>
       </div>
       {title ? <h1 style={{ paddingTop: "4px" }}>{title}</h1> : null}
-      <div>Qwik City Location: {JSON.stringify(loc.href)}</div>
+      <div>Qwik City Location: {JSON.stringify(loc.url.href)}</div>
       <ul>
         <li>
           <a
