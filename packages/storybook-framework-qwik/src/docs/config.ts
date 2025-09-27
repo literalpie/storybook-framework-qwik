@@ -1,4 +1,7 @@
-import type { ArgTypesEnhancer, StrictArgTypes } from "storybook/internal/types";
+import type {
+  ArgTypesEnhancer,
+  StrictArgTypes,
+} from "storybook/internal/types";
 import { enhanceArgTypes, convert } from "storybook/internal/docs-tools";
 import { ComponentDoc } from "react-docgen-typescript";
 

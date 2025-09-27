@@ -6,7 +6,7 @@ import { $ } from "@builder.io/qwik";
 const meta = {
   title: "Button",
   args: {
-    onClick$: $(() => {})
+    onClick$: $(() => {}),
   },
   argTypes: {
     onClick$: { action: "onClick" },

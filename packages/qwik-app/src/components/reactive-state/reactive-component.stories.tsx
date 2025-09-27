@@ -8,7 +8,7 @@ import { within, userEvent } from "storybook/test";
 
 const ReactiveComponentWrapper = component$<ReactiveComponentProps>((args) => {
   const state = useSignal(args.state.value);
-  
+
   return <ReactiveComponent state={state} />;
 });
 
