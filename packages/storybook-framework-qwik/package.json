@@ -84,24 +84,25 @@
   },
   "dependencies": {
     "@storybook/builder-vite": "^9.0.0",
-    "magic-string": "^0.30.7",
+    "magic-string": "^0.30.17",
     "react-docgen-typescript": "^2.2.2"
   },
   "peerDependencies": {
-    "@builder.io/qwik": ">=0.16.1"
+    "@builder.io/qwik": ">=1.0.0"
   },
   "optionalDependencies": {
-    "@builder.io/qwik-city": ">=1.16.1"
+    "@builder.io/qwik-city": ">=1.0.0"
   },
   "devDependencies": {
     "@suin/semantic-release-yarn": "1.1.0",
-    "@types/node": "^22.8.7",
-    "semantic-release": "^24.2.0",
-    "typescript": "~5.6.3",
-    "vite": "^5.4.10"
+    "@types/node": "^22.13.10",
+    "semantic-release": "^24.2.3",
+    "storybook": "9.1.8",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.7"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "publishConfig": {
     "access": "public"
