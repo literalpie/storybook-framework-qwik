@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "App with Routing built-in (recommended)",
   "engines": {
-    "node": ">=15.0.0"
+    "node": ">=20.0.0"
   },
   "private": true,
   "scripts": {
@@ -27,12 +27,11 @@
   "devDependencies": {
     "@builder.io/qwik": "1.12.1",
     "@builder.io/qwik-city": "1.12.1",
-    "@storybook/addon-a11y": "8.6.6",
-    "@storybook/addon-essentials": "8.6.6",
-    "@storybook/addon-interactions": "8.6.6",
-    "@storybook/builder-vite": "8.6.6",
+    "@storybook/addon-a11y": "9.1.8",
+    "@storybook/addon-docs": "9.1.8",
+    "@storybook/builder-vite": "9.1.8",
     "@storybook/jest": "0.2.3",
-    "@storybook/test-runner": "0.22.0",
+    "@storybook/test-runner": "0.23.0",
     "@types/eslint": "9.6.1",
     "@types/node": "22.13.10",
     "@typescript-eslint/eslint-plugin": "8.26.1",
@@ -44,7 +43,7 @@
     "prettier": "3.5.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "storybook": "8.6.6",
+    "storybook": "9.1.8",
     "storybook-framework-qwik": "workspace:*",
     "typescript": "5.8.2",
     "undici": "7.5.0",

@@ -3,13 +3,14 @@ import { QWIK_LOADER } from "@builder.io/qwik/loader";
 import { qwikDocgen } from "./docs/qwik-docgen.js";
 import { StorybookConfig } from "./types.js";
 import { dirname, join } from "path";
+import { createRequire } from "module";
 
+const require = createRequire(import.meta.url);
 const wrapForPnP = (input: string) =>
   dirname(require.resolve(join(input, "package.json")));
 
 export const core: StorybookConfig["core"] = {
   builder: wrapForPnP("@storybook/builder-vite"),
-  renderer: wrapForPnP("storybook-framework-qwik"),
 };
 
 export const viteFinal: StorybookConfig["viteFinal"] = async (

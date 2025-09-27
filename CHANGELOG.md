@@ -1,4 +1,13 @@
-# 0.4.0
+# 0.5.0
+
+- Storybook 9 support
+- Minimum NodeJS version support >= 20.0.0
+
+# 0.4.3
+
+- Resolve CommonJS/ESM Compatibility issue.
+
+# 0.4.1
 
 - Update dependencies
 - Template now uses @storybook/test instead of @storybook/testing-library

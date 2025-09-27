@@ -1,7 +1,7 @@
-// This file is entirely copied from @storybook/addon-actions (changing the action import)
+// This file is entirely copied from storybook/actions (changing the action import)
 
-import type { Args, Renderer, ArgsEnhancer } from "@storybook/types";
-import { action } from "@storybook/addon-actions";
+import type { Args, Renderer, ArgsEnhancer } from "storybook/internal/types";
+import { action } from "storybook/actions";
 
 const isInInitialArgs = (name: string, initialArgs: Args) =>
   typeof initialArgs[name] === "undefined" && !(name in initialArgs);
