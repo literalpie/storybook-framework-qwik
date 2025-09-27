@@ -94,10 +94,10 @@
     "@builder.io/qwik-city": ">=1.0.0"
   },
   "devDependencies": {
-    "@storybook/types": "^8.6.6",
     "@suin/semantic-release-yarn": "1.1.0",
     "@types/node": "^22.13.10",
     "semantic-release": "^24.2.3",
+    "storybook": "9.1.8",
     "typescript": "~5.8.2",
     "vite": "^5.4.14"
   },
