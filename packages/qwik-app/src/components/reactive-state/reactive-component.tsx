@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 
-export type ReactiveComponentProps = { state: {count:number} };
+export type ReactiveComponentProps = { state: { count: number } };
 export const ReactiveComponent = component$(
   ({ state }: ReactiveComponentProps) => {
     return (
