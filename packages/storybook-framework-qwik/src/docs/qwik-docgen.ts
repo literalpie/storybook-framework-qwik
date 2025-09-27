@@ -21,7 +21,9 @@ export function qwikDocgen(): PluginOption {
           },
         });
         const s = new MagicString(src);
-        s.append(`typeof window !== 'undefined' && (window.__STORYBOOK_COMPONENT_DOC__ ??= new Map());`);
+        s.append(
+          `typeof window !== 'undefined' && (window.__STORYBOOK_COMPONENT_DOC__ ??= new Map());`,
+        );
         componentDocs.forEach((componentDoc) =>
           s.append(
             `typeof window !== 'undefined' && (window.__STORYBOOK_COMPONENT_DOC__.set("${toKebabCase(
