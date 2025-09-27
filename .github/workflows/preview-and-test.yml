@@ -51,6 +51,6 @@ jobs:
       - name: Storybook Test
         if: ${{ env.vercel_token != '' }}
         run: |
-          pnpm --filter qwik-app exec playwright install --with-deps && pnpm --filter qwik-app test-storybook
+          pnpm --filter qwik-app exec playwright install --with-deps chromium && pnpm --filter qwik-app test-storybook
         env:
           TARGET_URL: "${{ steps.deploy.outputs.url }}"
