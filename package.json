@@ -20,14 +20,15 @@
     "fmt-all": "pnpm -r fmt",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
-    "storybook.build": "pnpm --filter qwik-app storybook.build"
+    "storybook.build": "pnpm --filter qwik-app storybook.build",
+    "release": "pnpm --filter storybook-framework-qwik release"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "22.13.10",
     "concurrently": "^9.1.2",
     "prettier": "^3.6.2",
-    "@types/node": "22.13.10",
     "typescript": "5.9.2",
     "vercel": "^48.1.6",
     "wait-on": "^9.0.1"
