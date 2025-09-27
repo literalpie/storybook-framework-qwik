@@ -11,6 +11,8 @@ jobs:
     env:
       vercel_token: ${{ secrets.VERCEL_TOKEN }}
     runs-on: ubuntu-latest
+    container: 
+      image: mcr.microsoft.com/playwright:v1.55.1-noble
     environment:
       name: Storybook Preview
       url: ${{ steps.deploy.outputs.url }}
@@ -29,7 +31,6 @@ jobs:
 
       - name: Install
         run: |
-          cd ${{ github.workspace }}
           pnpm install
 
       - name: Lint
@@ -51,6 +52,6 @@ jobs:
       - name: Storybook Test
         if: ${{ env.vercel_token != '' }}
         run: |
-          pnpm --filter qwik-app exec playwright install --with-deps && pnpm --filter qwik-app test-storybook
+          pnpm --filter qwik-app test-storybook
         env:
           TARGET_URL: "${{ steps.deploy.outputs.url }}"
