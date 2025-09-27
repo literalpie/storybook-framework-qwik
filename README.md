@@ -10,7 +10,7 @@ This is a framework to allow using [Storybook](https://storybook.js.org/) with [
 - Stories are run in dev mode - no SSR, or serialization happens
 
 ## Setup
-
+<!-- test -->
 In an existing Qwik project, run `npx storybook@next init` (Storybook 7 is required)
 
 See the [Storybook Docs](https://storybook.js.org/docs/7.0/qwik/get-started/introduction) for the best documentation on getting started with Storybook.
