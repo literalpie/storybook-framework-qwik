@@ -2,7 +2,8 @@
   "compilerOptions": {
     "allowJs": true,
     "target": "ES2017",
-    "module": "ES2020",
+    "moduleResolution": "Bundler",
+    "module": "ES2022",
     "lib": ["es2020", "DOM"],
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
@@ -10,7 +11,6 @@
     "declaration": true,
     "declarationDir": "lib-types",
     "resolveJsonModule": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "incremental": true,

@@ -7,6 +7,7 @@
   "directories": {
     "example": "examples"
   },
+  "type": "module",
   "scripts": {
     "//test": "start storybook, then when the port is available, start tests of all storybook stories",
     "test": "concurrently --kill-others \"pnpm --filter qwik-app storybook --no-open\" \"wait-on http://localhost:6006 && pnpm --filter qwik-app test-storybook\"",
@@ -26,6 +27,8 @@
   "devDependencies": {
     "concurrently": "^9.1.2",
     "prettier": "^3.6.2",
+    "@types/node": "22.13.10",
+    "typescript": "5.9.2",
     "vercel": "^48.1.6",
     "wait-on": "^9.0.1"
   },

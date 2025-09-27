@@ -3,8 +3,8 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "Node16",
-    "module": "CommonJS",
+    "moduleResolution": "Bundler",
+    "module": "ES2022",
     "rootDir": "../"
   },
   "exclude": [
