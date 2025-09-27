@@ -79,7 +79,7 @@
     "build": "tsc --outDir ./dist --listEmittedFiles",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
-    "release": "auto shipit"
+    "release": "pnpm build && pnpm auto shipit"
   },
   "dependencies": {
     "@storybook/builder-vite": "^9.0.0",
