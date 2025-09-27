@@ -5,3 +5,5 @@ ignoredBuiltDependencies:
   - '@swc/core'
   - esbuild
   - sharp
+  
+packageManagerStrictVersion: true

@@ -19,6 +19,9 @@ export default {
   args: { state: { count: 1 } },
 } as Meta<ReactiveComponentProps>;
 
+// Note: it seems like this fails when testing locally (props are immutable), but passes in CI. 
+// Not sure which one is correct. 
+// The goal is for this component to only mutate a store, which is shown in Qwik docs
 export const Default: StoryObj<ReactiveComponentProps> = {};
 export const Args: StoryObj<ReactiveComponentProps> = {
   args: { state: { count: 7 } },
