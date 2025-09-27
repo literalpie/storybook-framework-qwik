@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "App with Routing built-in (recommended)",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "private": true,
   "scripts": {
