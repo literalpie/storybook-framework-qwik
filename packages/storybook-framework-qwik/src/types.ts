@@ -1,7 +1,12 @@
 import { Component } from "@builder.io/qwik";
 import { StorybookConfigVite } from "@storybook/builder-vite";
 import { WebRenderer } from "storybook/internal/types";
-export type { Args, ArgTypes, Parameters, StrictArgs } from "storybook/internal/types";
+export type {
+  Args,
+  ArgTypes,
+  Parameters,
+  StrictArgs,
+} from "storybook/internal/types";
 import type {
   AnnotatedStoryFn,
   Args,

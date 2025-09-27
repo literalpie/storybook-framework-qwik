@@ -1,5 +1,9 @@
 import { inlinedQrl, render as renderQwik } from "@builder.io/qwik";
-import { ArgsEnhancer, ArgsStoryFn, RenderContext } from "storybook/internal/types";
+import {
+  ArgsEnhancer,
+  ArgsStoryFn,
+  RenderContext,
+} from "storybook/internal/types";
 import { QwikRenderer } from "./types.js";
 import { componentToJSX } from "./component-to-jsx.js";
 import {
