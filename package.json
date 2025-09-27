@@ -9,21 +9,18 @@
   },
   "scripts": {
     "//test": "start storybook, then when the port is available, start tests of all storybook stories",
-    "test": "concurrently --kill-others \"yarn workspace qwik-app storybook --no-open\" \"wait-on http://localhost:6006 && yarn workspace qwik-app test-storybook\"",
+    "test": "concurrently --kill-others \"pnpm --filter qwik-app storybook --no-open\" \"wait-on http://localhost:6006 && pnpm --filter qwik-app test-storybook\"",
     "//dev": "start tsc build/watch, then when the files are available the first time, start storybook in the app (qwik-lib is less commonly used)",
-    "dev": "concurrently \"yarn watch\" \"wait-on ./packages/storybook-framework-qwik/dist/index.js && yarn workspace qwik-app storybook\"",
-    "watch": "yarn workspace storybook-framework-qwik watch",
-    "build": "yarn workspace storybook-framework-qwik build",
-    "lint-all": "yarn workspaces foreach run fmt.check && yarn workspaces foreach run lint",
-    "storybook": "yarn workspace qwik-app storybook",
-    "fmt-all": "yarn workspaces foreach run fmt",
+    "dev": "concurrently \"pnpm watch\" \"wait-on ./packages/storybook-framework-qwik/dist/index.js && pnpm --filter qwik-app storybook\"",
+    "watch": "pnpm --filter storybook-framework-qwik watch",
+    "build": "pnpm --filter storybook-framework-qwik build",
+    "lint-all": "pnpm -r fmt.check && pnpm -r lint",
+    "storybook": "pnpm --filter qwik-app storybook",
+    "fmt-all": "pnpm -r fmt",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
-    "storybook.build": "yarn workspace qwik-app storybook.build"
+    "storybook.build": "pnpm --filter qwik-app storybook.build"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
@@ -37,6 +34,5 @@
     "@builder.io/qwik-city": "1.12.1",
     "undici": "7.5.0",
     "vite": "^5.4.14"
-  },
-  "packageManager": "yarn@3.4.1"
+  }
 }
