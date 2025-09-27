@@ -12,7 +12,7 @@ jobs:
       vercel_token: ${{ secrets.VERCEL_TOKEN }}
     runs-on: ubuntu-latest
     container: 
-      image: mcr.microsoft.com/playwright:v1.55.0-noble
+      image: mcr.microsoft.com/playwright:v1.55.1-noble
     environment:
       name: Storybook Preview
       url: ${{ steps.deploy.outputs.url }}
