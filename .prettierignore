@@ -2,5 +2,7 @@
 node_modules
 # Each package has its own prettier script. To format packages, run yarn `fmt-all`
 packages
+pnpm-lock.yaml
+pnpm-workspace.yaml
 .yarn
 
