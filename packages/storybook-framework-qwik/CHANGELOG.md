@@ -1,3 +1,20 @@
+# v0.6.0 (Thu Dec 25 2025)
+
+#### 🚀 Enhancement
+
+- chore: upgrade storybook to 10 [#91](https://github.com/literalpie/storybook-framework-qwik/pull/91) ([@RAZRULETEL](https://github.com/RAZRULETEL))
+
+#### 🐛 Bug Fix
+
+- build: install less playwright stuff [#87](https://github.com/literalpie/storybook-framework-qwik/pull/87) ([@literalpie](https://github.com/literalpie))
+
+#### Authors: 2
+
+- Benjamin Kindle ([@literalpie](https://github.com/literalpie))
+- Vadim ([@RAZRULETEL](https://github.com/RAZRULETEL))
+
+---
+
 # v0.5.0 (Sat Sep 27 2025)
 
 #### 🚀 Enhancement
