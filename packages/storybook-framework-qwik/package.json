@@ -82,7 +82,7 @@
     "release": "pnpm build && pnpm auto shipit"
   },
   "dependencies": {
-    "@storybook/builder-vite": "^10.1.0",
+    "@storybook/builder-vite": "^10.3.3",
     "magic-string": "^0.30.17",
     "react-docgen-typescript": "^2.2.2"
   },
@@ -94,8 +94,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
-    "storybook": "10.1.0",
-    "auto": "11.3.0",
+    "auto": "11.3.6",
+    "storybook": "10.3.3",
     "typescript": "~5.9.2",
     "vite": "^7.1.7"
   },
