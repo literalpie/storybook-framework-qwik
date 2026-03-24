@@ -28,16 +28,16 @@
   "devDependencies": {
     "@types/node": "22.13.10",
     "concurrently": "^9.1.2",
-    "prettier": "^3.6.2",
-    "typescript": "5.9.2",
-    "vercel": "^48.1.6",
-    "wait-on": "^9.0.1"
+    "prettier": "^3.8.1",
+    "typescript": "6.0.2",
+    "vercel": "^50.35.0",
+    "wait-on": "^9.0.4"
   },
   "dependencies": {
-    "@builder.io/qwik": "1.16.1",
-    "@builder.io/qwik-city": "1.16.1",
-    "undici": "7.16.0",
-    "vite": "^7.1.7"
+    "@builder.io/qwik": "1.19.2",
+    "@builder.io/qwik-city": "1.19.2",
+    "undici": "7.24.5",
+    "vite": "^7.0.0"
   },
   "packageManager": "pnpm@10.17.1"
 }

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "storybook-framework-qwik";
 import type { HeaderProps } from "./header";
 import { Header } from "./header";
+import { $ } from "@builder.io/qwik";
 
 const meta = {
   title: "Example/Header",
@@ -11,7 +12,11 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
-  args: { },
+  args: { 
+    onLogin$: $(()=>{}),
+    onLogout$: $(()=>{}),
+    onCreateAccount$: $(()=>{})
+  },
   argTypes: {
     onCreateAccount$: { action: 'onCreateAccount' },
     onLogin$: { action: 'onLogin' },
