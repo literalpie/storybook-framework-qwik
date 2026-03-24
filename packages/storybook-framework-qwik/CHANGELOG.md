@@ -1,3 +1,15 @@
+# v0.6.1 (Tue Mar 24 2026)
+
+#### 🐛 Bug Fix
+
+- Update deps march [#93](https://github.com/literalpie/storybook-framework-qwik/pull/93) ([@literalpie](https://github.com/literalpie))
+
+#### Authors: 1
+
+- Benjamin Kindle ([@literalpie](https://github.com/literalpie))
+
+---
+
 # v0.6.0 (Thu Dec 25 2025)
 
 #### 🚀 Enhancement
