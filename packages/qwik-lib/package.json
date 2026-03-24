@@ -38,15 +38,14 @@
   "devDependencies": {
     "@builder.io/qwik": "1.19.2",
     "@builder.io/qwik-city": "1.19.2",
+    "@eslint/js": "^10.0.1",
     "@storybook/addon-docs": "10.3.3",
     "@storybook/addon-links": "10.3.3",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.13.10",
     "@types/node-fetch": "^2.6.12",
-    "@typescript-eslint/eslint-plugin": "^8.44.1",
-    "@typescript-eslint/parser": "^8.44.1",
-    "eslint": "^8.57.1",
-    "eslint-plugin-qwik": "1.16.1",
+    "eslint": "^10.1.0",
+    "eslint-plugin-qwik": "1.19.2",
     "eslint-plugin-storybook": "^10.3.3",
     "node-fetch": "^3.3.2",
     "np": "^11.0.2",
@@ -56,6 +55,7 @@
     "storybook": "10.3.3",
     "storybook-framework-qwik": "workspace:*",
     "typescript": "^6.0.2",
+    "typescript-eslint": "^8.57.2",
     "undici": "^7.24.5",
     "vite": "^8.0.2"
   }
