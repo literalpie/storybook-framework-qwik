@@ -83,21 +83,21 @@
   },
   "dependencies": {
     "@storybook/builder-vite": "^10.3.3",
-    "magic-string": "^0.30.17",
+    "magic-string": "^0.30.21",
     "react-docgen-typescript": "^2.2.2"
   },
   "peerDependencies": {
     "@builder.io/qwik": ">=1.0.0"
   },
   "optionalDependencies": {
-    "@builder.io/qwik-city": ">=1.0.0"
+    "@builder.io/qwik-city": "^1.19.2"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
     "auto": "11.3.6",
     "storybook": "10.3.3",
-    "typescript": "~5.9.2",
-    "vite": "^7.1.7"
+    "typescript": "~6.0.2",
+    "vite": "^8.0.2"
   },
   "engines": {
     "node": ">=22.0.0"

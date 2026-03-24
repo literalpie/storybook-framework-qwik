@@ -9,16 +9,16 @@ function getComponentId(): string {
   return window.__STORYBOOK_PREVIEW__?.currentRender?.story?.componentId;
 }
 
-function getComponentDoc(): ComponentDoc {
+function getComponentDoc(): ComponentDoc | undefined {
   const componentId = getComponentId();
   return window.__STORYBOOK_COMPONENT_DOC__?.get(componentId);
 }
 
-function extractComponentDescription(): string {
+function extractComponentDescription(): string | undefined {
   return getComponentDoc()?.description;
 }
 
-function extractArgTypes(): StrictArgTypes {
+function extractArgTypes(): StrictArgTypes | undefined {
   const componentDoc = getComponentDoc();
   if (!componentDoc) return undefined;
   const strictArgTypes: StrictArgTypes = {};
