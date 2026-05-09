@@ -34,8 +34,8 @@
     "wait-on": "^9.0.4"
   },
   "dependencies": {
-    "@builder.io/qwik": "1.19.2",
-    "@builder.io/qwik-city": "1.19.2",
+    "@qwik.dev/core": "2.0.0-beta.31",
+    "@qwik.dev/router": "2.0.0-beta.31",
     "undici": "7.24.5",
     "vite": "^7.0.0"
   },

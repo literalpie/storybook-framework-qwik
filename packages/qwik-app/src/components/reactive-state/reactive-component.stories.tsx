@@ -3,7 +3,7 @@ import {
   ReactiveComponentProps,
 } from "./reactive-component";
 import { Meta, StoryObj } from "../../../../storybook-framework-qwik/dist";
-import { component$, useStore } from "@builder.io/qwik";
+import { component$, useStore } from "@qwik.dev/core";
 import { within, userEvent } from "storybook/test";
 
 const ReactiveComponentWrapper = component$<ReactiveComponentProps>((args) => {

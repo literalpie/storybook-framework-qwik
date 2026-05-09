@@ -38,7 +38,7 @@ import {
   ReactiveComponentProps,
 } from "./reactive-component";
 import { Meta, StoryObj } from "storybook-framework-qwik";
-import { component$, useStore } from "@builder.io/qwik";
+import { component$, useStore } from "@qwik.dev/core";
 
 const ReactiveComponentWrapper = component$<ReactiveComponentProps>((args) => {
   const state = useStore(args.state);
@@ -60,7 +60,7 @@ export const Default: StoryObj<ReactiveComponentProps> = {};
 To make a story decorator, create a function that returns JSX, including the StoryFn passed to the decorator as a parameter
 
 ```tsx
-import { JSXNode } from "@builder.io/qwik";
+import { JSXNode } from "@qwik.dev/core";
 import { MyComponent } from "./my-component";
 import { Decorator } from "storybook-framework-qwik";
 

@@ -1,4 +1,4 @@
-import { Component } from "@builder.io/qwik";
+import { Component } from "@qwik.dev/core";
 import { StorybookConfigVite } from "@storybook/builder-vite";
 import { WebRenderer } from "storybook/internal/types";
 export type {
@@ -19,10 +19,15 @@ import type {
   ProjectAnnotations,
   StorybookConfig as StorybookConfigBase,
 } from "storybook/internal/types";
+import {QwikRouterMockProps} from '@qwik.dev/router';
 
 export interface QwikRenderer<T> extends WebRenderer {
   component: Component<T>;
   storyResult: ReturnType<Component<T>>;
+  csf4: true,
+  parameters?: {
+    qwikCity?: QwikRouterMockProps
+  }
 }
 
 export type Preview = ProjectAnnotations<QwikRenderer<unknown>>;

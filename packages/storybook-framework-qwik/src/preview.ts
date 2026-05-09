@@ -1,4 +1,4 @@
-import { inlinedQrl, render as renderQwik } from "@builder.io/qwik";
+import { inlinedQrl, render as renderQwik } from "@qwik.dev/core";
 import {
   ArgsEnhancer,
   ArgsStoryFn,

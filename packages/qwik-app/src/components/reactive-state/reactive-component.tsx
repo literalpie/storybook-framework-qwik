@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 
 export type ReactiveComponentProps = { state: { count: number } };
 export const ReactiveComponent = component$(
