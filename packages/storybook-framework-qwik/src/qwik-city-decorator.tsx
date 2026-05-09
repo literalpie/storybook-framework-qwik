@@ -1,7 +1,9 @@
-import { QwikCityMockProvider } from "@builder.io/qwik-city";
+import { QwikRouterMockProvider } from "@qwik.dev/router";
 import { Decorator } from "./types.js";
 
-/** Wraps story in QwikCityMockProvider */
-export const qwikCityDecorator: Decorator = (Story) => (
-  <QwikCityMockProvider>{Story()}</QwikCityMockProvider>
+/** Wraps story in QwikRouterMockProvider */
+export const qwikCityDecorator: Decorator = (Story, { parameters }) => (
+  <QwikRouterMockProvider {...parameters.qwikCity}>
+    {Story()}
+  </QwikRouterMockProvider>
 );

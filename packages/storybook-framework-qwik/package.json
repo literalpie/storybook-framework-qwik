@@ -82,22 +82,22 @@
     "release": "pnpm build && pnpm auto shipit"
   },
   "dependencies": {
-    "@storybook/builder-vite": "^10.3.3",
+    "@storybook/builder-vite": "^10.3.6",
     "magic-string": "^0.30.21",
     "react-docgen-typescript": "^2.2.2"
   },
   "peerDependencies": {
-    "@builder.io/qwik": ">=1.0.0"
+    "@qwik.dev/core": "^2.0.0-beta.31"
   },
   "optionalDependencies": {
-    "@builder.io/qwik-city": "^1.19.2"
+    "@qwik.dev/router": "2.0.0-beta.34"
   },
   "devDependencies": {
-    "@types/node": "^22.13.10",
+    "@types/node": "^25.6.2",
     "auto": "11.3.6",
-    "storybook": "10.3.3",
-    "typescript": "~6.0.2",
-    "vite": "^7.0.0"
+    "storybook": "10.3.6",
+    "typescript": "~6.0.3",
+    "vite": "^8.0.11"
   },
   "engines": {
     "node": ">=22.0.0"

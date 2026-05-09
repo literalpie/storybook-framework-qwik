@@ -1,5 +1,5 @@
-import type { PropFunction } from "@builder.io/qwik";
-import { component$ } from "@builder.io/qwik";
+import type { QRL } from "@qwik.dev/core";
+import { component$ } from "@qwik.dev/core";
 
 export interface ButtonProps {
   /**
@@ -9,7 +9,7 @@ export interface ButtonProps {
   /**
    * Optional click handler
    */
-  onClick$?: PropFunction<onClickEvent> | undefined;
+  onClick$?: QRL<onClickEvent> | undefined;
 }
 
 export type onClickEvent = (event: MouseEvent, element: Element) => void;

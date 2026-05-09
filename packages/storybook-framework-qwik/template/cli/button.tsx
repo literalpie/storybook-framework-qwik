@@ -1,5 +1,5 @@
-import type { PropFunction } from "@builder.io/qwik";
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import type { QRL } from "@qwik.dev/core";
+import { component$, useStylesScoped$ } from "@qwik.dev/core";
 import buttonStyles from "./button.css?inline";
 
 export interface ButtonProps {
@@ -22,7 +22,7 @@ export interface ButtonProps {
   /**
    * Optional click handler
    */
-  onClick$?: PropFunction<onClickEvent> | undefined;
+  onClick$?: QRL<onClickEvent> | undefined;
 }
 
 export const getClassForSize = (size: "small" | "medium" | "large") => {

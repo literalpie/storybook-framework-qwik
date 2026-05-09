@@ -1,5 +1,5 @@
-import type { PropFunction } from "@builder.io/qwik";
-import { component$ } from "@builder.io/qwik";
+import type { QRL } from "@qwik.dev/core";
+import { component$ } from "@qwik.dev/core";
 import { Button } from "./button";
 import "./header.css";
 
@@ -9,9 +9,9 @@ type User = {
 
 export type HeaderProps = {
   user?: User;
-  onLogin$: PropFunction<() => void>;
-  onLogout$: PropFunction<() => void>;
-  onCreateAccount$: PropFunction<() => void>;
+  onLogin$: QRL<() => void>;
+  onLogout$: QRL<() => void>;
+  onCreateAccount$: QRL<() => void>;
 };
 
 /** The header component includes the app title and information about the currently logged in user. */

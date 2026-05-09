@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "storybook-framework-qwik";
 import type { ButtonProps } from "./button";
 import { Button } from "./button";
-import { $ } from "@builder.io/qwik";
+import { $ } from "@qwik.dev/core";
 
 const meta = {
   title: "Button",

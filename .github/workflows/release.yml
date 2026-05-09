@@ -1,6 +1,10 @@
 name: Release
-
-on: [push]
+# force build
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   release:
@@ -20,9 +24,6 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-
-          
-
 
       - name: Create Release
         env:

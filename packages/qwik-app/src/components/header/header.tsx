@@ -1,7 +1,7 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@qwik.dev/core";
 import { QwikLogo } from "../icons/qwik";
 import styles from "./header.css?inline";
-import { useLocation } from "@builder.io/qwik-city";
+import { useLocation } from "@qwik.dev/router";
 
 export type HeaderProps = { title: string };
 export const Header = component$(({ title }: HeaderProps) => {
