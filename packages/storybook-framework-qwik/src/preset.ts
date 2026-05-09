@@ -13,6 +13,7 @@ export const core: StorybookConfig["core"] = {
 export const viteFinal: StorybookConfig["viteFinal"] = async (
   defaultConfig,
 ) => {
+  console.log('start base', defaultConfig.base);
   const config = mergeConfig(defaultConfig, {
     build: {
       target: "es2020",
@@ -21,6 +22,11 @@ export const viteFinal: StorybookConfig["viteFinal"] = async (
       }
     },
   });
+  
+  // I get an error like: Error: vite's config.base must begin and end with /
+  if (config.base && !config.base.startsWith('/')) {
+    config.base = config.base === './' ? '/' : config.base;
+  }
 
   if (
     !config.plugins.some(
