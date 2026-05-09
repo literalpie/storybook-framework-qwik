@@ -1,9 +1,15 @@
 packages:
   - packages/*
 
+allowBuilds:
+  '@swc/core': false
+  esbuild: false
+  sharp: false
+  unrs-resolver: false
+
 ignoredBuiltDependencies:
   - '@swc/core'
   - esbuild
   - sharp
-  
+
 packageManagerStrictVersion: true
