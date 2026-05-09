@@ -19,15 +19,15 @@ import type {
   ProjectAnnotations,
   StorybookConfig as StorybookConfigBase,
 } from "storybook/internal/types";
-import {QwikRouterMockProps} from '@qwik.dev/router';
+import { QwikRouterMockProps } from "@qwik.dev/router";
 
 export interface QwikRenderer<T> extends WebRenderer {
   component: Component<T>;
   storyResult: ReturnType<Component<T>>;
-  csf4: true,
+  csf4: true;
   parameters?: {
-    qwikCity?: QwikRouterMockProps
-  }
+    qwikCity?: QwikRouterMockProps;
+  };
 }
 
 export type Preview = ProjectAnnotations<QwikRenderer<unknown>>;

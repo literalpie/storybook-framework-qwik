@@ -187,7 +187,7 @@ importers:
   packages/storybook-framework-qwik:
     dependencies:
       '@qwik.dev/core':
-        specifier: 2.0.0-beta.31
+        specifier: ^2.0.0-beta.31
         version: 2.0.0-beta.31(prettier@3.8.1)(vite@7.3.1(@types/node@22.13.10)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.4))
       '@storybook/builder-vite':
         specifier: ^10.3.6
@@ -198,6 +198,10 @@ importers:
       react-docgen-typescript:
         specifier: ^2.2.2
         version: 2.4.0(typescript@6.0.2)
+    optionalDependencies:
+      '@qwik.dev/router':
+        specifier: ^2.0.0-beta.31
+        version: 2.0.0-beta.31(@qwik.dev/core@2.0.0-beta.31(prettier@3.8.1)(vite@7.3.1(@types/node@22.13.10)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.4)))(rollup@4.60.0)(typescript@6.0.2)(vite@7.3.1(@types/node@22.13.10)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.4))
     devDependencies:
       '@types/node':
         specifier: ^22.13.10
@@ -214,10 +218,6 @@ importers:
       vite:
         specifier: ^7.0.0
         version: 7.3.1(@types/node@22.13.10)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.4)
-    optionalDependencies:
-      '@qwik.dev/router':
-        specifier: 2.0.0-beta.31
-        version: 2.0.0-beta.31(@qwik.dev/core@2.0.0-beta.31(prettier@3.8.1)(vite@7.3.1(@types/node@22.13.10)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.4)))(rollup@4.60.0)(typescript@6.0.2)(vite@7.3.1(@types/node@22.13.10)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.4))
 
 packages:
 

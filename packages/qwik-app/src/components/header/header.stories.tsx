@@ -8,8 +8,8 @@ export default {
   tags: ["docsPage"],
   parameters: {
     qwikCity: {
-      url: "http://example.com"
-    }
+      url: "http://example.com",
+    },
   },
 } as Meta<HeaderProps>;
 
@@ -18,7 +18,7 @@ export const WithTitle: StoryObj<HeaderProps> = {
   args: { title: "Test Title" },
   parameters: {
     qwikCity: {
-      url: "http://qwik.dev"
-    }
-  }
+      url: "http://qwik.dev",
+    },
+  },
 };
