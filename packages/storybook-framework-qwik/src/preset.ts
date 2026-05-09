@@ -17,8 +17,8 @@ export const viteFinal: StorybookConfig["viteFinal"] = async (
     build: {
       target: "es2020",
       rollupOptions: {
-        external: ["@qwik-city-plan"],
-      },
+        external: ["@qwik-city-plan", '@qwik.dev/router/service-worker'],
+      }
     },
   });
 
